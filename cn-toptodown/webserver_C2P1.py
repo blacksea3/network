@@ -55,26 +55,58 @@ class HTTPINFO:
                 continue
             self.otherdicts.update({otherline[0: temploc + 1]: otherline[temploc + 2: ]})
 
-    def getres(self):
-        return '1'
+    def getfilepath(self):
+        return self.url
 
-
+import os
 from socket import *
-serverPort = 12000
+serverPort = 8888
 serverSocket = socket(AF_INET, SOCK_STREAM)
 serverSocket.bind(('', serverPort))
 serverSocket.listen(1)   #same time 1 connections
 while True:
     connectionSocket, addr = serverSocket.accept()
     sentence = connectionSocket.recv(1024)
-    httpinfo = HTTPINFO(sentence)
-    
-    #print(sentence)
-    #extract these datas
-
-
-    message = ('HTTP/1.1 404 NOT FOUND\r\n')
-    message = bytes(message, encoding="utf8")
-    connectionSocket.send(message)
-    connectionSocket.close()
+    try:
+        httpinfo = HTTPINFO(sentence)
+        rela_filepath = httpinfo.getfilepath()
+        print(rela_filepath)
+        if rela_filepath[-1] == '/':  #文件不以/结尾,暴力判断
+            message = ('HTTP/1.1 200 OK\r\n\r\n invalid filename')
+            message = bytes(message, encoding="utf8")
+            connectionSocket.send(message)
+            connectionSocket.close()
+        else:
+            dir = os.getcwd()
+            abs_filepath = os.path.join(dir, rela_filepath)
+            print(abs_filepath)
+            #判断是否有文件以及文件大小
+            if os.path.exists(abs_filepath):
+                filesize = os.path.getsize(abs_filepath)
+                if filesize > 16384:
+                    message = ('HTTP/1.1 200 OK\r\n\r\n TOOBIG file')
+                    message = bytes(message, encoding="utf8")
+                    connectionSocket.send(message)
+                    connectionSocket.close()
+                else:
+                    message = 'HTTP/1.1 200 OK\r\n\r\n'
+                    fileobj = open(abs_filepath, 'r')
+                    try:
+                        fstrings = fileobj.read()
+                    except Exception as e:
+                        print(e)
+                    finally:
+                        fileobj.close()
+                    message = bytes(message + fstrings, encoding="utf8")
+                    connectionSocket.send(message)
+                    connectionSocket.close()
+            else:
+                message = ('HTTP/1.1 404 NOT FOUND\r\n')
+                message = bytes(message, encoding="utf8")
+                connectionSocket.send(message)
+                connectionSocket.close()
+    except Exception as e:
+        print(e)
+        print('NOT VALID HTTP string')
+        connectionSocket.close()
 

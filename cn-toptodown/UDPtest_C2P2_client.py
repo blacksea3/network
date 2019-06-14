@@ -15,10 +15,11 @@ CLIENT
 from socket import *
 import time
 
-serverName = '127.0.0.1'
+#serverName = 'doudou.ac.cn'
+serverName = '18.222.252.3'
 serverPort = 9090
 clientSocket = socket(AF_INET, SOCK_DGRAM)
-clientSocket.settimeout(1)   #1s timeout
+clientSocket.settimeout(5)   #1s timeout
 while True:
     choose = input('Input order: ping means run, end means exit, other dump')
     if choose == 'ping':
