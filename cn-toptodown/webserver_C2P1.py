@@ -77,8 +77,9 @@ while True:
             connectionSocket.send(message)
             connectionSocket.close()
         else:
-            dir = os.getcwd()
-            abs_filepath = os.path.join(dir, rela_filepath)
+            mdir = os.getcwd()
+            print(mdir)
+            abs_filepath = os.path.join(mdir, rela_filepath[1:])
             print(abs_filepath)
             #判断是否有文件以及文件大小
             if os.path.exists(abs_filepath):
