@@ -34,9 +34,9 @@
 #define ISspace(x) isspace((int)(x))
 
 #define SERVER_STRING "Server: jdbhttpd/0.1.0\r\n"
-#define PORT 8080
+#define PORT 8090
 
-#define PRINT_ALL_RAW_DATA_DEBUG true
+#define PRINT_ALL_RAW_DATA_DEBUG false
 
  //每次收到请求，创建一个线程来处理接受到的请求
  //把client_sock转成地址作为参数传入pthread_create
@@ -189,6 +189,18 @@ void accept_request(void *arg)
 		//可解析的第一行字符串是get或post, 然后有空格 get或post大小写不限定
 		sbuf = std::string(buf);
 		httpMethodStr hms = parserFirstLine(sbuf);
+		file << sbuf.c_str();
+		int dump = 0;
+
+		//读取所有信息
+		while ((numchars > 0) && strcmp("\n", buf))
+		{
+			numchars = get_line(client, buf, sizeof(buf));
+			sbuf = std::string(buf);
+			dump++;
+			file << sbuf.c_str();
+		}
+
 		if (hms.httpMethod == HTTPMETHOD::HTTPMETHOD_OTHER)
 		{
 			unimplemented(client);
@@ -213,8 +225,8 @@ void accept_request(void *arg)
 			}
 			else //找到了
 			{
-				not_found(client);
-				//serve_file(client, fullPath.c_str());
+				//not_found(client);
+				serve_file(client, fullPath.c_str());
 			}
 			//执行cgi文件
 			//execute_cgi(client, path, method, query_string);
@@ -267,6 +279,8 @@ void cat(int client, FILE *resource)
 		send(client, buf, strlen(buf), 0);
 		fgets(buf, sizeof(buf), resource);
 	}
+	if (strlen(buf) != 0) send(client, buf, strlen(buf), 0);
+	return;
 }
 
 /**********************************************************************/
@@ -304,9 +318,16 @@ void error_die(const char *sc)
  * Parameters: client socket descriptor
  *             path to the CGI script */
  /**********************************************************************/
+//修改: 采用父子线程方式执行此函数, windows上没有fork机制
+//子线程执行脚本结果放在记事本中, 然后子线程定时循环查看记事本信息, 执行脚本完毕后通知父线程
+//父线程再从记事本中获取信息
 //void execute_cgi(int client, const char *path,
 //	const char *method, const char *query_string)
 //{
+//	 //500 INTERNAL ERROR
+//	 //cannot_execute(client);
+//
+//
 //	//缓冲区
 //	char buf[1024];
 //
@@ -502,17 +523,18 @@ int get_line(int sock, char *buf, int size)
  //加入http的headers
 void headers(int client, const char *filename)
 {
-	char buf[1024];
-	(void)filename;  /* could use filename to determine file type */
+	//char buf[1024];
+	//(void)filename;  /* could use filename to determine file type */
 
-	strcpy(buf, "HTTP/1.1 200 OK\r\n");
-	send(client, buf, strlen(buf), 0);
-	strcpy(buf, SERVER_STRING);
-	send(client, buf, strlen(buf), 0);
-	sprintf(buf, "Content-Type: text/html\r\n");
-	send(client, buf, strlen(buf), 0);
-	strcpy(buf, "\r\n");
-	send(client, buf, strlen(buf), 0);
+	send(client, "HTTP/1.1 200 OK\r\n", strlen("HTTP/1.1 200 OK\r\n"), 0);
+	send(client, SERVER_STRING, strlen(SERVER_STRING), 0);
+	send(client, "Content-Type: text/html\r\n", strlen("Content-Type: text/html\r\n"), 0);
+	send(client, "\r\n", strlen("\r\n"), 0);
+
+	send(client, "?????", strlen("?????"), 0);
+
+	//strcpy(buf, "HTTP/1.1 200 OK\r\n");
+	//send(client, buf, strlen(buf), 0);
 }
 
 /**********************************************************************/
@@ -522,7 +544,7 @@ void headers(int client, const char *filename)
 //如果资源没有找到得返回给客户端下面的信息
 void not_found(int client)
 {
-	char buf[1024];
+	//char buf[1024];
 
 	//sprintf(buf, "HTTP/1.1 404 NOT FOUND\r\n");
 	send(client, "HTTP/1.1 404 NOT FOUND\r\n", strlen("HTTP/1.1 404 NOT FOUND\r\n"), 0);
@@ -545,7 +567,7 @@ void not_found(int client)
 	send(client, "\r\n", strlen("\r\n"), 0);
 
 	//sprintf(buf, "I WANNA FUCK YOU\r\n");
-	send(client, "I WANNA FUCK YOU\r\n", strlen("I WANNA FUCK YOU\r\n"), 0);
+	send(client, "404 NOT FOUND\r\n", strlen("404 NOT FOUND\r\n"), 0);
 
 	/*
 
@@ -574,13 +596,6 @@ void not_found(int client)
 void serve_file(int client, const char *filename)
 {
 	FILE *resource = NULL;
-	int numchars = 1;
-	char buf[1024];
-
-	//默认字符
-	buf[0] = 'A'; buf[1] = '\0';
-	while ((numchars > 0) && strcmp("\n", buf))  /* read & discard headers */
-		numchars = get_line(client, buf, sizeof(buf));
 
 	resource = fopen(filename, "r");
 	if (resource == NULL)
@@ -698,12 +713,12 @@ int main(void)
 		if (client_sock == -1)
 			error_die("accept");
 
-		accept_request((void *)(intptr_t)client_sock);  //单线程
+		//accept_request((void *)(intptr_t)client_sock);  //单线程
 
 		 //每次收到请求，创建一个线程来处理接受到的请求
 		 //把client_sock转成地址作为参数传入
-		//std::thread t1(accept_request, (void *)(intptr_t)client_sock);
-		//t1.join();
+		std::thread t1(accept_request, (void *)(intptr_t)client_sock);
+		t1.join();
 	}
 	closesocket(server_sock);
 	int r = WSACleanup();
