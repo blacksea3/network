@@ -1,3 +1,7 @@
+#VS2017 temp files
+cpphttpd/.vs/*
+cpphttpd/cpphttpd/Debug/*
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
