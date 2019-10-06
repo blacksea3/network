@@ -26,8 +26,6 @@
 #include <fstream>
 #include <algorithm>
 
-#include "HttpStringParser.h"
-
 
 
 //宏定义，是否是空格
@@ -123,25 +121,12 @@ void execl(const char*, const char*, int);
 // Form Data
 // color=gray
 
-
-/*
- * 获取当前程序运行路径
- */
-std::string GetProgramDir()
-{
-	char exeFullPath[MAX_PATH]; // Full path
-	std::string strPath = "";
-	GetModuleFileNameA(NULL, exeFullPath, MAX_PATH);
-	strPath = (std::string)exeFullPath;    // Get full path of the file
-	int pos = strPath.find_last_of('\\', strPath.length());
-	return strPath.substr(0, pos);  // Return the directory without the file name
-}
-
 /**********************************************************************/
 /* A request has caused a call to accept() on the server port to
  * return.  Process the request appropriately.
  * Parameters: the socket connected to the client */
  /**********************************************************************/
+/*
 void accept_request(void *arg)
 {
 	//socket
@@ -238,6 +223,7 @@ void accept_request(void *arg)
 	closesocket(client);
 	file.close();
 }
+*/
 
 /**********************************************************************/
 /* Inform the client that a request it has made has a problem.
@@ -616,6 +602,7 @@ void serve_file(int client, const char *filename)
  * Parameters: pointer to variable containing the port to connect on
  * Returns: the socket */
  /**********************************************************************/
+/*
 int startup(u_short *port)
 {
 	//int httpd = 0;
@@ -633,7 +620,7 @@ int startup(u_short *port)
 	if (bind(httpd, (struct sockaddr *)&name, sizeof(name)) < 0)
 		error_die("bind");
 	//如果端口没有设置，提供个随机端口
-	if (*port == 0)  /* if dynamically allocating a port */
+	if (*port == 0)  //if dynamically allocating a port
 	{
 		socklen_t namelen = sizeof(name);
 		if (getsockname(httpd, (struct sockaddr *)&name, &namelen) == -1)
@@ -645,6 +632,7 @@ int startup(u_short *port)
 		error_die("listen");
 	return(httpd);
 }
+*/
 
 /**********************************************************************/
 /* Inform the client that the requested web method has not been
@@ -676,7 +664,7 @@ void unimplemented(int client)
 }
 
 /**********************************************************************/
-
+/*
 int main(void)
 {
 	//parserFirstLineTest();
@@ -729,3 +717,4 @@ int main(void)
 
 	return(0);
 }
+*/
