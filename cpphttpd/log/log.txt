@@ -1,989 +1,295 @@
-begin accept_request:
-Confusing HTTP data: empty
-end accept_request:
-
-begin accept_request:
-Confusing HTTP data: empty
-end accept_request:
-
-begin accept_request:
-end accept_request:
-
-begin accept_request:
-GET /a.txt HTTP/1.1
-Host: 127.0.0.1:8080
-Connection: keep-alive
-Cache-Control: max-age=0
-Upgrade-Insecure-Requests: 1
-User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36
-Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3
-Accept-Encoding: gzip, deflate, br
-Accept-Language: zh-CN,zh;q=0.9
-
-end accept_request:
-
-begin accept_request:
-GET /a.txt HTTP/1.1
-Host: 127.0.0.1:8080
-Connection: keep-alive
-Cache-Control: max-age=0
-Upgrade-Insecure-Requests: 1
-User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36
-Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3
-Accept-Encoding: gzip, deflate, br
-Accept-Language: zh-CN,zh;q=0.9
-
-end accept_request:
-
-begin accept_request:
-Confusing HTTP data: empty
-end accept_request:
-
-begin accept_request:
-begin accept_request:
-GET /a.txt HTTP/1.1
-Host: 127.0.0.1:8080
-Connection: keep-alive
-Cache-Control: max-age=0
-Upgrade-Insecure-Requests: 1
-User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36
-Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3
-Accept-Encoding: gzip, deflate, br
-Accept-Language: zh-CN,zh;q=0.9
-
-end accept_request:
-
-begin accept_request:
-GET /a.txt HTTP/1.1
-Host: 127.0.0.1:8080
-Connection: keep-alive
-Cache-Control: max-age=0
-Upgrade-Insecure-Requests: 1
-User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36
-Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3
-Accept-Encoding: gzip, deflate, br
-Accept-Language: zh-CN,zh;q=0.9
-
-end accept_request:
-
-begin accept_request:
-Confusing HTTP data: empty
-end accept_request:
-
-begin accept_request:
-begin accept_request:
-Confusing HTTP data: empty
-end accept_request:
-
-begin accept_request:
-GET /a.txt HTTP/1.1
-Host: 127.0.0.1:8080
-Connection: keep-alive
-Cache-Control: max-age=0
-Upgrade-Insecure-Requests: 1
-User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36
-Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3
-Accept-Encoding: gzip, deflate, br
-Accept-Language: zh-CN,zh;q=0.9
-
-end accept_request:
-
-begin accept_request:
-Confusing HTTP data: empty
-end accept_request:
-
-begin accept_request:
-GET /a.txt HTTP/1.1
-Host: 127.0.0.1:8080
-Connection: keep-alive
-Cache-Control: max-age=0
-Upgrade-Insecure-Requests: 1
-User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36
-Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3
-Accept-Encoding: gzip, deflate, br
-Accept-Language: zh-CN,zh;q=0.9
-
-end accept_request:
-
-begin accept_request:
-GET /a.txt HTTP/1.1
-Host: 127.0.0.1:8080
-Connection: keep-alive
-Cache-Control: max-age=0
-Upgrade-Insecure-Requests: 1
-User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36
-Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3
-Accept-Encoding: gzip, deflate, br
-Accept-Language: zh-CN,zh;q=0.9
-
-end accept_request:
-
-begin accept_request:
-GET /a.txt HTTP/1.1
-Host: 127.0.0.1:8080
-Connection: keep-alive
-Upgrade-Insecure-Requests: 1
-User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36
-Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3
-Accept-Encoding: gzip, deflate, br
-Accept-Language: zh-CN,zh;q=0.9
-
-end accept_request:
-
-begin accept_request:
-GET /favicon.ico HTTP/1.1
-Host: 127.0.0.1:8080
-Connection: keep-alive
-User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36
-Accept: image/webp,image/apng,image/*,*/*;q=0.8
-Referer: http://127.0.0.1:8080/a.txt
-Accept-Encoding: gzip, deflate, br
-Accept-Language: zh-CN,zh;q=0.9
-
-end accept_request:
-
-begin accept_request:
-Confusing HTTP data: empty
-end accept_request:
-
-begin accept_request:
-end accept_request:
-
-begin accept_request:
-end accept_request:
-
-begin accept_request:
-Confusing HTTP data: empty
-end accept_request:
-
-begin accept_request:
-Confusing HTTP data: empty
-end accept_request:
-
-begin accept_request:
-end accept_request:
-
-begin accept_request:
-end accept_request:
-
-begin accept_request:
-end accept_request:
-
-begin accept_request:
-end accept_request:
-
-begin accept_request:
-end accept_request:
-
-begin accept_request:
-Confusing HTTP data: empty
-end accept_request:
-
-begin accept_request:
-end accept_request:
-
-begin accept_request:
-Confusing HTTP data: empty
-end accept_request:
-
-begin accept_request:
-GET /a.txtdd HTTP/1.1
-Host: 127.0.0.1:8080
-Connection: keep-alive
-Cache-Control: max-age=0
-Upgrade-Insecure-Requests: 1
-User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36
-Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3
-Accept-Encoding: gzip, deflate, br
-Accept-Language: zh-CN,zh;q=0.9
-
-end accept_request:
-
-begin accept_request:
-GET /ddasdasdas HTTP/1.1
-Host: 127.0.0.1:8090
-Connection: keep-alive
-Upgrade-Insecure-Requests: 1
-User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36
-Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3
-Accept-Encoding: gzip, deflate, br
-Accept-Language: zh-CN,zh;q=0.9
-
-end accept_request:
-
-begin accept_request:
-GET /favicon.ico HTTP/1.1
-Host: 127.0.0.1:8090
-Connection: keep-alive
-User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36
-Accept: image/webp,image/apng,image/*,*/*;q=0.8
-Referer: http://127.0.0.1:8090/ddasdasdas
-Accept-Encoding: gzip, deflate, br
-Accept-Language: zh-CN,zh;q=0.9
-
-end accept_request:
-
-begin accept_request:
-Confusing HTTP data: empty
-end accept_request:
-
-begin accept_request:
-GET /ddasdasdas HTTP/1.1
-Host: 127.0.0.1:8090
-Connection: keep-alive
-Cache-Control: max-age=0
-Upgrade-Insecure-Requests: 1
-User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36
-Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3
-Accept-Encoding: gzip, deflate, br
-Accept-Language: zh-CN,zh;q=0.9
-
-end accept_request:
-
-begin accept_request:
-GET /ddasdasdas HTTP/1.1
-Host: 127.0.0.1:8090
-Connection: keep-alive
-Cache-Control: max-age=0
-Upgrade-Insecure-Requests: 1
-User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36
-Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3
-Accept-Encoding: gzip, deflate, br
-Accept-Language: zh-CN,zh;q=0.9
-
-end accept_request:
-
-begin accept_request:
-Confusing HTTP data: empty
-end accept_request:
-
-begin accept_request:
-GET /a.txt HTTP/1.1
-Host: 127.0.0.1:8090
-Connection: keep-alive
-Upgrade-Insecure-Requests: 1
-User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36
-Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3
-Accept-Encoding: gzip, deflate, br
-Accept-Language: zh-CN,zh;q=0.9
-
-end accept_request:
-
-begin accept_request:
-Confusing HTTP data: empty
-end accept_request:
-
-begin accept_request:
-GET /ddasdasdas HTTP/1.1
-Host: 127.0.0.1:8090
-Connection: keep-alive
-Cache-Control: max-age=0
-Upgrade-Insecure-Requests: 1
-User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36
-Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3
-Accept-Encoding: gzip, deflate, br
-Accept-Language: zh-CN,zh;q=0.9
-
-end accept_request:
-
-begin accept_request:
-GET /ddasdasdas HTTP/1.1
-Host: 127.0.0.1:8090
-Connection: keep-alive
-Cache-Control: max-age=0
-Upgrade-Insecure-Requests: 1
-User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36
-Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3
-Accept-Encoding: gzip, deflate, br
-Accept-Language: zh-CN,zh;q=0.9
-
-end accept_request:
-
-begin accept_request:
-begin accept_request:
-begin accept_request:
-GET /a.txt HTTP/1.1
-Host: 127.0.0.1:8090
-Connection: keep-alive
-Cache-Control: max-age=0
-Upgrade-Insecure-Requests: 1
-User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36
-Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3
-Accept-Encoding: gzip, deflate, br
-Accept-Language: zh-CN,zh;q=0.9
-
-end accept_request:
-
-begin accept_request:
-GET /a.txt HTTP/1.1
-Host: 127.0.0.1:8090
-Connection: keep-alive
-Cache-Control: max-age=0
-Upgrade-Insecure-Requests: 1
-User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36
-Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3
-Accept-Encoding: gzip, deflate, br
-Accept-Language: zh-CN,zh;q=0.9
-
-end accept_request:
-
-begin accept_request:
-GET /a.txtd HTTP/1.1
-Host: 127.0.0.1:8090
-Connection: keep-alive
-Upgrade-Insecure-Requests: 1
-User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36
-Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3
-Accept-Encoding: gzip, deflate, br
-Accept-Language: zh-CN,zh;q=0.9
-
-end accept_request:
-
-begin accept_request:
-GET /a.txtd HTTP/1.1
-Host: 127.0.0.1:8090
-Connection: keep-alive
-Cache-Control: max-age=0
-Upgrade-Insecure-Requests: 1
-User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36
-Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3
-Accept-Encoding: gzip, deflate, br
-Accept-Language: zh-CN,zh;q=0.9
-
-end accept_request:
-
-begin accept_request:
-GET /a.txt HTTP/1.1
-Host: 127.0.0.1:8090
-Connection: keep-alive
-Upgrade-Insecure-Requests: 1
-User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36
-Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3
-Accept-Encoding: gzip, deflate, br
-Accept-Language: zh-CN,zh;q=0.9
-
-end accept_request:
-
-begin accept_request:
-Confusing HTTP data: empty
-end accept_request:
-
-begin accept_request:
-GET /a.txt HTTP/1.1
-Host: 127.0.0.1:8090
-Connection: keep-alive
-Upgrade-Insecure-Requests: 1
-User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36
-Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3
-Accept-Encoding: gzip, deflate, br
-Accept-Language: zh-CN,zh;q=0.9
-
-end accept_request:
-
-begin accept_request:
-GET /a.txt HTTP/1.1
-Host: 127.0.0.1:8090
-Connection: keep-alive
-Cache-Control: max-age=0
-Upgrade-Insecure-Requests: 1
-User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36
-Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3
-Accept-Encoding: gzip, deflate, br
-Accept-Language: zh-CN,zh;q=0.9
-
-end accept_request:
-
-begin accept_request:
-Confusing HTTP data: empty
-end accept_request:
-
-begin accept_request:
-Confusing HTTP data: empty
-end accept_request:
-
-begin accept_request:
-GET /a.txt HTTP/1.1
-Host: 127.0.0.1:8090
-Connection: keep-alive
-Cache-Control: max-age=0
-Upgrade-Insecure-Requests: 1
-User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36
-Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3
-Accept-Encoding: gzip, deflate, br
-Accept-Language: zh-CN,zh;q=0.9
-
-end accept_request:
-
-begin accept_request:
-GET / HTTP/1.1
-Host: 127.0.0.1:8090
-Connection: keep-alive
-Upgrade-Insecure-Requests: 1
-User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36
-Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3
-Accept-Encoding: gzip, deflate, br
-Accept-Language: zh-CN,zh;q=0.9
-
-end accept_request:
-
-begin accept_request:
-Confusing HTTP data: empty
-end accept_request:
-
-begin accept_request:
-GET /index.html HTTP/1.1
-Host: 127.0.0.1:8090
-Connection: keep-alive
-Upgrade-Insecure-Requests: 1
-User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36
-Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3
-Accept-Encoding: gzip, deflate, br
-Accept-Language: zh-CN,zh;q=0.9
-
-end accept_request:
-
-begin accept_request:
-Confusing HTTP data: empty
-end accept_request:
-
-begin accept_request:
-Confusing HTTP data: empty
-end accept_request:
-
-begin accept_request:
-Confusing HTTP data: empty
-end accept_request:
-
-begin accept_request:
-GET /a.txt HTTP/1.1
-Host: 127.0.0.1:8080
-Connection: keep-alive
-Cache-Control: max-age=0
-Upgrade-Insecure-Requests: 1
-User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36
-Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3
-Accept-Encoding: gzip, deflate, br
-Accept-Language: zh-CN,zh;q=0.9
-
-end accept_request:
-
-begin accept_request:
-GET /favicon.ico HTTP/1.1
-Host: 127.0.0.1:8080
-Connection: keep-alive
-User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36
-Accept: image/webp,image/apng,image/*,*/*;q=0.8
-Referer: http://127.0.0.1:8080/a.txt
-Accept-Encoding: gzip, deflate, br
-Accept-Language: zh-CN,zh;q=0.9
-
-end accept_request:
-
-begin accept_request:
-GET /a.txt HTTP/1.1
-Host: 127.0.0.1:8080
-Connection: keep-alive
-Cache-Control: max-age=0
-Upgrade-Insecure-Requests: 1
-User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36
-Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3
-Accept-Encoding: gzip, deflate, br
-Accept-Language: zh-CN,zh;q=0.9
-
-end accept_request:
-
-begin accept_request:
-GET /a.txt HTTP/1.1
-Host: 127.0.0.1:8080
-Connection: keep-alive
-Cache-Control: max-age=0
-Upgrade-Insecure-Requests: 1
-User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36
-Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3
-Accept-Encoding: gzip, deflate, br
-Accept-Language: zh-CN,zh;q=0.9
-
-end accept_request:
-
-begin accept_request:
-GET /a.txt HTTP/1.1
-Host: 127.0.0.1:8080
-Connection: keep-alive
-Cache-Control: max-age=0
-Upgrade-Insecure-Requests: 1
-User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36
-Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3
-Accept-Encoding: gzip, deflate, br
-Accept-Language: zh-CN,zh;q=0.9
-
-end accept_request:
-
-begin accept_request:
-GET /a.txt HTTP/1.1
-Host: 127.0.0.1:8080
-Connection: keep-alive
-Cache-Control: max-age=0
-Upgrade-Insecure-Requests: 1
-User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36
-Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3
-Accept-Encoding: gzip, deflate, br
-Accept-Language: zh-CN,zh;q=0.9
-
-end accept_request:
-
-begin accept_request:
-GET /a.txt HTTP/1.1
-Host: 127.0.0.1:8080
-Connection: keep-alive
-Cache-Control: max-age=0
-Upgrade-Insecure-Requests: 1
-User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36
-Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3
-Accept-Encoding: gzip, deflate, br
-Accept-Language: zh-CN,zh;q=0.9
-
-end accept_request:
-
-begin accept_request:
-GET /a.txt HTTP/1.1
-Host: 127.0.0.1:8080
-Connection: keep-alive
-Cache-Control: max-age=0
-Upgrade-Insecure-Requests: 1
-User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36
-Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3
-Accept-Encoding: gzip, deflate, br
-Accept-Language: zh-CN,zh;q=0.9
-
-end accept_request:
-
-begin accept_request:
-GET /a.txt HTTP/1.1
-Host: 127.0.0.1:8080
-Connection: keep-alive
-Cache-Control: max-age=0
-Upgrade-Insecure-Requests: 1
-User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36
-Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3
-Accept-Encoding: gzip, deflate, br
-Accept-Language: zh-CN,zh;q=0.9
-
-end accept_request:
-
-begin accept_request:
-GET /a.txt HTTP/1.1
-Host: 127.0.0.1:8080
-Connection: keep-alive
-Cache-Control: max-age=0
-Upgrade-Insecure-Requests: 1
-User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36
-Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3
-Accept-Encoding: gzip, deflate, br
-Accept-Language: zh-CN,zh;q=0.9
-
-end accept_request:
-
-begin accept_request:
-GET /favicon.ico HTTP/1.1
-Host: 127.0.0.1:8080
-Connection: keep-alive
-Pragma: no-cache
-Cache-Control: no-cache
-User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36
-Accept: image/webp,image/apng,image/*,*/*;q=0.8
-Referer: http://127.0.0.1:8080/a.txt
-Accept-Encoding: gzip, deflate, br
-Accept-Language: zh-CN,zh;q=0.9
-
-end accept_request:
-
-begin accept_request:
-GET /a.txt HTTP/1.1
-Host: 127.0.0.1:8080
-Connection: keep-alive
-Cache-Control: max-age=0
-Upgrade-Insecure-Requests: 1
-User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36
-Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3
-Accept-Encoding: gzip, deflate, br
-Accept-Language: zh-CN,zh;q=0.9
-
-end accept_request:
-
-begin accept_request:
-GET /a.txt HTTP/1.1
-Host: 127.0.0.1:8080
-Connection: keep-alive
-Cache-Control: max-age=0
-Upgrade-Insecure-Requests: 1
-User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36
-Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3
-Accept-Encoding: gzip, deflate, br
-Accept-Language: zh-CN,zh;q=0.9
-
-end accept_request:
-
-begin accept_request:
-Confusing HTTP data: empty
-end accept_request:
-
-begin accept_request:
-Confusing HTTP data: empty
-end accept_request:
-
-begin accept_request:
-GET /a.txt HTTP/1.1
-Host: 127.0.0.1:8080
-Connection: keep-alive
-Cache-Control: max-age=0
-Upgrade-Insecure-Requests: 1
-User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36
-Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3
-Accept-Encoding: gzip, deflate, br
-Accept-Language: zh-CN,zh;q=0.9
-
-end accept_request:
-
-begin accept_request:
-GET /a.txt HTTP/1.1
-Host: 127.0.0.1:8080
-Connection: keep-alive
-Cache-Control: max-age=0
-Upgrade-Insecure-Requests: 1
-User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36
-Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3
-Accept-Encoding: gzip, deflate, br
-Accept-Language: zh-CN,zh;q=0.9
-
-end accept_request:
-
-begin accept_request:
-Confusing HTTP data: empty
-end accept_request:
-
-begin accept_request:
-GET /a.txt HTTP/1.1
-Host: 127.0.0.1:8080
-Connection: keep-alive
-Cache-Control: max-age=0
-Upgrade-Insecure-Requests: 1
-User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36
-Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3
-Accept-Encoding: gzip, deflate, br
-Accept-Language: zh-CN,zh;q=0.9
-
-end accept_request:
-
-begin accept_request:
-Confusing HTTP data: empty
-end accept_request:
-
-begin accept_request:
-Confusing HTTP data: empty
-end accept_request:
-
-begin accept_request:
-GET /a.txt HTTP/1.1
-Host: 127.0.0.1:8080
-Connection: keep-alive
-Cache-Control: max-age=0
-Upgrade-Insecure-Requests: 1
-User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36
-Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3
-Accept-Encoding: gzip, deflate, br
-Accept-Language: zh-CN,zh;q=0.9
-
-end accept_request:
-
-begin accept_request:
-GET /a.txt HTTP/1.1
-Host: 127.0.0.1:8080
-Connection: keep-alive
-Upgrade-Insecure-Requests: 1
-User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36
-Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3
-Accept-Encoding: gzip, deflate, br
-Accept-Language: zh-CN,zh;q=0.9
-
-end accept_request:
-
-begin accept_request:
-GET /a.txt HTTP/1.1
-Host: 127.0.0.1:8080
-Connection: keep-alive
-Cache-Control: max-age=0
-Upgrade-Insecure-Requests: 1
-User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36
-Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3
-Accept-Encoding: gzip, deflate, br
-Accept-Language: zh-CN,zh;q=0.9
-
-end accept_request:
-
-begin accept_request:
-GET /a.txt HTTP/1.1
-Host: 127.0.0.1:8080
-Connection: keep-alive
-Cache-Control: max-age=0
-Upgrade-Insecure-Requests: 1
-User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36
-Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3
-Accept-Encoding: gzip, deflate, br
-Accept-Language: zh-CN,zh;q=0.9
-
-end accept_request:
-
-begin accept_request:
-GET /a.txt HTTP/1.1
-Host: 127.0.0.1:8080
-Connection: keep-alive
-Cache-Control: max-age=0
-Upgrade-Insecure-Requests: 1
-User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36
-Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3
-Accept-Encoding: gzip, deflate, br
-Accept-Language: zh-CN,zh;q=0.9
-
-end accept_request:
-
-begin accept_request:
-GET /a.txt HTTP/1.1
-Host: 127.0.0.1:8080
-Connection: keep-alive
-Cache-Control: max-age=0
-Upgrade-Insecure-Requests: 1
-User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36
-Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3
-Accept-Encoding: gzip, deflate, br
-Accept-Language: zh-CN,zh;q=0.9
-
-end accept_request:
-
-begin accept_request:
-GET /a.tx HTTP/1.1
-Host: 127.0.0.1:8080
-Connection: keep-alive
-Upgrade-Insecure-Requests: 1
-User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36
-Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3
-Accept-Encoding: gzip, deflate, br
-Accept-Language: zh-CN,zh;q=0.9
-
-end accept_request:
-
-begin accept_request:
-GET /a.tx HTTP/1.1
-Host: 127.0.0.1:8080
-Connection: keep-alive
-Cache-Control: max-age=0
-Upgrade-Insecure-Requests: 1
-User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36
-Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3
-Accept-Encoding: gzip, deflate, br
-Accept-Language: zh-CN,zh;q=0.9
-
-end accept_request:
-
-begin accept_request:
-GET /a.tx HTTP/1.1
-Host: 127.0.0.1:8080
-Connection: keep-alive
-Cache-Control: max-age=0
-Upgrade-Insecure-Requests: 1
-User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36
-Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3
-Accept-Encoding: gzip, deflate, br
-Accept-Language: zh-CN,zh;q=0.9
-
-end accept_request:
-
-begin accept_request:
-GET /a.txhkjkjl HTTP/1.1
-Host: 127.0.0.1:8080
-Connection: keep-alive
-Upgrade-Insecure-Requests: 1
-User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36
-Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3
-Accept-Encoding: gzip, deflate, br
-Accept-Language: zh-CN,zh;q=0.9
-
-end accept_request:
-
-begin accept_request:
-GET /a.txhkjkjl%E7%9A%84 HTTP/1.1
-Host: 127.0.0.1:8080
-Connection: keep-alive
-Upgrade-Insecure-Requests: 1
-User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36
-Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3
-Accept-Encoding: gzip, deflate, br
-Accept-Language: zh-CN,zh;q=0.9
-
-end accept_request:
-
-begin accept_request:
-GET /a.txhkjkjl HTTP/1.1
-Host: 127.0.0.1:8080
-Connection: keep-alive
-Upgrade-Insecure-Requests: 1
-User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36
-Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3
-Accept-Encoding: gzip, deflate, br
-Accept-Language: zh-CN,zh;q=0.9
-
-end accept_request:
-
-begin accept_request:
-GET /a.txhkjkjl HTTP/1.1
-Host: 127.0.0.1:8080
-Connection: keep-alive
-Cache-Control: max-age=0
-Upgrade-Insecure-Requests: 1
-User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36
-Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3
-Accept-Encoding: gzip, deflate, br
-Accept-Language: zh-CN,zh;q=0.9
-
-end accept_request:
-
-begin accept_request:
-GET /a.txhkjkjl HTTP/1.1
-Host: 127.0.0.1:8080
-Connection: keep-alive
-Cache-Control: max-age=0
-Upgrade-Insecure-Requests: 1
-User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36
-Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3
-Accept-Encoding: gzip, deflate, br
-Accept-Language: zh-CN,zh;q=0.9
-
-end accept_request:
-
-begin accept_request:
-GET /a.txt HTTP/1.1
-Host: 127.0.0.1:8080
-Connection: keep-alive
-Upgrade-Insecure-Requests: 1
-User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36
-Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3
-Accept-Encoding: gzip, deflate, br
-Accept-Language: zh-CN,zh;q=0.9
-
-end accept_request:
-
-begin accept_request:
-GET /a.txt HTTP/1.1
-Host: 127.0.0.1:8080
-Connection: keep-alive
-Cache-Control: max-age=0
-Upgrade-Insecure-Requests: 1
-User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36
-Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3
-Accept-Encoding: gzip, deflate, br
-Accept-Language: zh-CN,zh;q=0.9
-
-end accept_request:
-
-begin accept_request:
-GET /a.txt HTTP/1.1
-Host: 127.0.0.1:8080
-Connection: keep-alive
-Cache-Control: max-age=0
-Upgrade-Insecure-Requests: 1
-User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36
-Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3
-Accept-Encoding: gzip, deflate, br
-Accept-Language: zh-CN,zh;q=0.9
-
-end accept_request:
-
-begin accept_request:
-GET /a.txt HTTP/1.1
-Host: 127.0.0.1:8080
-Connection: keep-alive
-Cache-Control: max-age=0
-Upgrade-Insecure-Requests: 1
-User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36
-Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3
-Accept-Encoding: gzip, deflate, br
-Accept-Language: zh-CN,zh;q=0.9
-
-end accept_request:
-
-begin accept_request:
-GET /addd// HTTP/1.1
-Host: 127.0.0.1:8080
-Connection: keep-alive
-Upgrade-Insecure-Requests: 1
-User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36
-Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3
-Accept-Encoding: gzip, deflate, br
-Accept-Language: zh-CN,zh;q=0.9
-
-end accept_request:
-
-begin accept_request:
-GET /addd?ssss HTTP/1.1
-Host: 127.0.0.1:8080
-Connection: keep-alive
-Upgrade-Insecure-Requests: 1
-User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36
-Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3
-Accept-Encoding: gzip, deflate, br
-Accept-Language: zh-CN,zh;q=0.9
-
-end accept_request:
-
-begin accept_request:
-Confusing HTTP data: empty
-end accept_request:
-
-begin accept_request:
-GET /addd?ssss HTTP/1.1
-Host: 127.0.0.1:8080
-Connection: keep-alive
-Cache-Control: max-age=0
-Upgrade-Insecure-Requests: 1
-User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36
-Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3
-Accept-Encoding: gzip, deflate, br
-Accept-Language: zh-CN,zh;q=0.9
-
-end accept_request:
-
-begin accept_request:
-GET /addd HTTP/1.1
-Host: 127.0.0.1:8080
-Connection: keep-alive
-Upgrade-Insecure-Requests: 1
-User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36
-Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3
-Accept-Encoding: gzip, deflate, br
-Accept-Language: zh-CN,zh;q=0.9
-
-end accept_request:
-
-begin accept_request:
-GET /a.txt HTTP/1.1
-Host: 127.0.0.1:8080
-Connection: keep-alive
-Upgrade-Insecure-Requests: 1
-User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36
-Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3
-Accept-Encoding: gzip, deflate, br
-Accept-Language: zh-CN,zh;q=0.9
-
-end accept_request:
-
-begin accept_request:
-GET /index.html HTTP/1.1
-Host: 127.0.0.1:8080
-Connection: keep-alive
-Upgrade-Insecure-Requests: 1
-User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36
-Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3
-Accept-Encoding: gzip, deflate, br
-Accept-Language: zh-CN,zh;q=0.9
-
-end accept_request:
-
+start http request time: Mon Oct  7 22:25:22 2019
+begin accept_request time: Mon Oct  7 22:25:23 2019
+GET /dasda?dsada=sdsad&asd HTTP/1.1 time: Mon Oct  7 22:25:23 2019
+Host: 127.0.0.1:8090 time: Mon Oct  7 22:25:23 2019
+Connection: keep-alive time: Mon Oct  7 22:25:23 2019
+Cache-Control: max-age=0 time: Mon Oct  7 22:25:23 2019
+Upgrade-Insecure-Requests: 1 time: Mon Oct  7 22:25:23 2019
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36 time: Mon Oct  7 22:25:23 2019
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3 time: Mon Oct  7 22:25:23 2019
+Accept-Encoding: gzip, deflate, br time: Mon Oct  7 22:25:23 2019
+Accept-Language: zh-CN,zh;q=0.9 time: Mon Oct  7 22:25:24 2019
+end accept_request time: Mon Oct  7 22:25:46 2019
+start http request time: Mon Oct  7 22:26:02 2019
+begin accept_request time: Mon Oct  7 22:26:02 2019
+Confusing HTTP data: empty time: Mon Oct  7 22:26:07 2019
+end accept_request time: Mon Oct  7 22:26:07 2019
+start http request time: Mon Oct  7 22:26:07 2019
+begin accept_request time: Mon Oct  7 22:26:07 2019
+GET /dasda?dsada=sdsad&asd HTTP/1.1 time: Mon Oct  7 22:26:07 2019
+Host: 127.0.0.1:8090 time: Mon Oct  7 22:26:07 2019
+Connection: keep-alive time: Mon Oct  7 22:26:07 2019
+Cache-Control: max-age=0 time: Mon Oct  7 22:26:07 2019
+Upgrade-Insecure-Requests: 1 time: Mon Oct  7 22:26:07 2019
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36 time: Mon Oct  7 22:26:07 2019
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3 time: Mon Oct  7 22:26:07 2019
+Accept-Encoding: gzip, deflate, br time: Mon Oct  7 22:26:07 2019
+Accept-Language: zh-CN,zh;q=0.9 time: Mon Oct  7 22:26:07 2019
+end accept_request time: Mon Oct  7 22:26:07 2019
+start http request time: Mon Oct  7 22:26:07 2019
+begin accept_request time: Mon Oct  7 22:26:07 2019
+GET /dasda?dsada=sdsad&asd HTTP/1.1 time: Mon Oct  7 22:26:08 2019
+Host: 127.0.0.1:8090 time: Mon Oct  7 22:26:08 2019
+Connection: keep-alive time: Mon Oct  7 22:26:08 2019
+Cache-Control: max-age=0 time: Mon Oct  7 22:26:08 2019
+Upgrade-Insecure-Requests: 1 time: Mon Oct  7 22:26:08 2019
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36 time: Mon Oct  7 22:26:08 2019
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3 time: Mon Oct  7 22:26:08 2019
+Accept-Encoding: gzip, deflate, br time: Mon Oct  7 22:26:08 2019
+Accept-Language: zh-CN,zh;q=0.9 time: Mon Oct  7 22:26:08 2019
+end accept_request time: Mon Oct  7 22:26:08 2019
+start http request time: Mon Oct  7 22:26:08 2019
+begin accept_request time: Mon Oct  7 22:26:08 2019
+GET /dasda?dsada=sdsad&asd HTTP/1.1 time: Mon Oct  7 22:26:09 2019
+Host: 127.0.0.1:8090 time: Mon Oct  7 22:26:09 2019
+Connection: keep-alive time: Mon Oct  7 22:26:09 2019
+Cache-Control: max-age=0 time: Mon Oct  7 22:26:09 2019
+Upgrade-Insecure-Requests: 1 time: Mon Oct  7 22:26:09 2019
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36 time: Mon Oct  7 22:26:09 2019
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3 time: Mon Oct  7 22:26:09 2019
+Accept-Encoding: gzip, deflate, br time: Mon Oct  7 22:26:09 2019
+Accept-Language: zh-CN,zh;q=0.9 time: Mon Oct  7 22:26:09 2019
+end accept_request time: Mon Oct  7 22:26:09 2019
+start http request time: Mon Oct  7 22:26:09 2019
+begin accept_request time: Mon Oct  7 22:26:09 2019
+start http request time: Mon Oct  7 22:26:29 2019
+begin accept_request time: Mon Oct  7 22:26:29 2019
+GET /dasda?dsada=sdsad&asd HTTP/1.1 time: Mon Oct  7 22:26:29 2019
+Host: 127.0.0.1:8090 time: Mon Oct  7 22:26:29 2019
+Connection: keep-alive time: Mon Oct  7 22:26:29 2019
+Cache-Control: max-age=0 time: Mon Oct  7 22:26:29 2019
+Upgrade-Insecure-Requests: 1 time: Mon Oct  7 22:26:29 2019
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36 time: Mon Oct  7 22:26:29 2019
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3 time: Mon Oct  7 22:26:29 2019
+Accept-Encoding: gzip, deflate, br time: Mon Oct  7 22:26:29 2019
+Accept-Language: zh-CN,zh;q=0.9 time: Mon Oct  7 22:26:29 2019
+end accept_request time: Mon Oct  7 22:26:29 2019
+start http request time: Mon Oct  7 22:26:29 2019
+begin accept_request time: Mon Oct  7 22:26:29 2019
+GET /dasda?dsada=sdsad&asd HTTP/1.1 time: Mon Oct  7 22:26:30 2019
+Host: 127.0.0.1:8090 time: Mon Oct  7 22:26:30 2019
+Connection: keep-alive time: Mon Oct  7 22:26:30 2019
+Cache-Control: max-age=0 time: Mon Oct  7 22:26:30 2019
+Upgrade-Insecure-Requests: 1 time: Mon Oct  7 22:26:30 2019
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36 time: Mon Oct  7 22:26:30 2019
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3 time: Mon Oct  7 22:26:30 2019
+Accept-Encoding: gzip, deflate, br time: Mon Oct  7 22:26:30 2019
+Accept-Language: zh-CN,zh;q=0.9 time: Mon Oct  7 22:26:30 2019
+end accept_request time: Mon Oct  7 22:26:30 2019
+start http request time: Mon Oct  7 22:26:30 2019
+begin accept_request time: Mon Oct  7 22:26:30 2019
+start http request time: Mon Oct  7 22:27:42 2019
+                                  time: Mon Oct  7 22:27:42 2019
+================================= time: Mon Oct  7 22:27:42 2019
+begin accept_request time: Mon Oct  7 22:27:42 2019
+GET /dasda?dsada=sdsad&asd HTTP/1.1 time: Mon Oct  7 22:27:42 2019
+Host: 127.0.0.1:8090 time: Mon Oct  7 22:27:42 2019
+Connection: keep-alive time: Mon Oct  7 22:27:42 2019
+Cache-Control: max-age=0 time: Mon Oct  7 22:27:42 2019
+Upgrade-Insecure-Requests: 1 time: Mon Oct  7 22:27:42 2019
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36 time: Mon Oct  7 22:27:42 2019
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3 time: Mon Oct  7 22:27:42 2019
+Accept-Encoding: gzip, deflate, br time: Mon Oct  7 22:27:42 2019
+Accept-Language: zh-CN,zh;q=0.9 time: Mon Oct  7 22:27:42 2019
+end accept_request time: Mon Oct  7 22:27:42 2019
+start http request time: Mon Oct  7 22:27:42 2019
+                                  time: Mon Oct  7 22:27:42 2019
+================================= time: Mon Oct  7 22:27:42 2019
+begin accept_request time: Mon Oct  7 22:27:42 2019
+GET /dasda?dsada=sdsad&asd HTTP/1.1 time: Mon Oct  7 22:27:42 2019
+Host: 127.0.0.1:8090 time: Mon Oct  7 22:27:42 2019
+Connection: keep-alive time: Mon Oct  7 22:27:42 2019
+Cache-Control: max-age=0 time: Mon Oct  7 22:27:42 2019
+Upgrade-Insecure-Requests: 1 time: Mon Oct  7 22:27:42 2019
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36 time: Mon Oct  7 22:27:42 2019
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3 time: Mon Oct  7 22:27:42 2019
+Accept-Encoding: gzip, deflate, br time: Mon Oct  7 22:27:42 2019
+Accept-Language: zh-CN,zh;q=0.9 time: Mon Oct  7 22:27:42 2019
+end accept_request time: Mon Oct  7 22:27:42 2019
+start http request time: Mon Oct  7 22:27:42 2019
+                                  time: Mon Oct  7 22:27:42 2019
+================================= time: Mon Oct  7 22:27:42 2019
+begin accept_request time: Mon Oct  7 22:27:42 2019
+GET /dasda?dsada=sdsad&asd HTTP/1.1 time: Mon Oct  7 22:27:43 2019
+Host: 127.0.0.1:8090 time: Mon Oct  7 22:27:43 2019
+Connection: keep-alive time: Mon Oct  7 22:27:43 2019
+Cache-Control: max-age=0 time: Mon Oct  7 22:27:43 2019
+Upgrade-Insecure-Requests: 1 time: Mon Oct  7 22:27:43 2019
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36 time: Mon Oct  7 22:27:43 2019
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3 time: Mon Oct  7 22:27:43 2019
+Accept-Encoding: gzip, deflate, br time: Mon Oct  7 22:27:43 2019
+Accept-Language: zh-CN,zh;q=0.9 time: Mon Oct  7 22:27:43 2019
+end accept_request time: Mon Oct  7 22:27:43 2019
+start http request time: Mon Oct  7 22:27:43 2019
+                                  time: Mon Oct  7 22:27:43 2019
+================================= time: Mon Oct  7 22:27:43 2019
+begin accept_request time: Mon Oct  7 22:27:43 2019
+GET /dasda?dsada=sdsad&asd HTTP/1.1 time: Mon Oct  7 22:27:43 2019
+Host: 127.0.0.1:8090 time: Mon Oct  7 22:27:43 2019
+Connection: keep-alive time: Mon Oct  7 22:27:43 2019
+Cache-Control: max-age=0 time: Mon Oct  7 22:27:43 2019
+Upgrade-Insecure-Requests: 1 time: Mon Oct  7 22:27:43 2019
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36 time: Mon Oct  7 22:27:43 2019
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3 time: Mon Oct  7 22:27:43 2019
+Accept-Encoding: gzip, deflate, br time: Mon Oct  7 22:27:43 2019
+Accept-Language: zh-CN,zh;q=0.9 time: Mon Oct  7 22:27:43 2019
+end accept_request time: Mon Oct  7 22:27:43 2019
+start http request time: Mon Oct  7 22:27:43 2019
+                                  time: Mon Oct  7 22:27:43 2019
+================================= time: Mon Oct  7 22:27:43 2019
+begin accept_request time: Mon Oct  7 22:27:43 2019
+GET /dasda?dsada=sdsad&asd HTTP/1.1 time: Mon Oct  7 22:27:44 2019
+Host: 127.0.0.1:8090 time: Mon Oct  7 22:27:44 2019
+Connection: keep-alive time: Mon Oct  7 22:27:44 2019
+Cache-Control: max-age=0 time: Mon Oct  7 22:27:44 2019
+Upgrade-Insecure-Requests: 1 time: Mon Oct  7 22:27:44 2019
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36 time: Mon Oct  7 22:27:44 2019
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3 time: Mon Oct  7 22:27:44 2019
+Accept-Encoding: gzip, deflate, br time: Mon Oct  7 22:27:44 2019
+Accept-Language: zh-CN,zh;q=0.9 time: Mon Oct  7 22:27:44 2019
+end accept_request time: Mon Oct  7 22:27:44 2019
+start http request time: Mon Oct  7 22:27:44 2019
+                                  time: Mon Oct  7 22:27:44 2019
+================================= time: Mon Oct  7 22:27:44 2019
+begin accept_request time: Mon Oct  7 22:27:44 2019
+start http request time: Mon Oct  7 22:29:13 2019
+                                  time: Mon Oct  7 22:29:13 2019
+================================= time: Mon Oct  7 22:29:13 2019
+begin accept_request time: Mon Oct  7 22:29:13 2019
+Confusing HTTP data: empty time: Mon Oct  7 22:29:27 2019
+end accept_request time: Mon Oct  7 22:29:30 2019
+start http request time: Mon Oct  7 22:29:30 2019
+                                  time: Mon Oct  7 22:29:30 2019
+================================= time: Mon Oct  7 22:29:30 2019
+begin accept_request time: Mon Oct  7 22:29:30 2019
+GET /dasdsa HTTP/1.1 time: Mon Oct  7 22:29:30 2019
+Host: 127.0.0.1:8080 time: Mon Oct  7 22:29:30 2019
+Connection: keep-alive time: Mon Oct  7 22:29:30 2019
+Upgrade-Insecure-Requests: 1 time: Mon Oct  7 22:29:30 2019
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36 time: Mon Oct  7 22:29:30 2019
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3 time: Mon Oct  7 22:29:30 2019
+Accept-Encoding: gzip, deflate, br time: Mon Oct  7 22:29:30 2019
+Accept-Language: zh-CN,zh;q=0.9 time: Mon Oct  7 22:29:30 2019
+end accept_request time: Mon Oct  7 22:29:31 2019
+start http request time: Mon Oct  7 22:29:39 2019
+                                  time: Mon Oct  7 22:29:39 2019
+================================= time: Mon Oct  7 22:29:39 2019
+begin accept_request time: Mon Oct  7 22:29:39 2019
+GET /dasdsa HTTP/1.1 time: Mon Oct  7 22:29:47 2019
+Host: 127.0.0.1:8080 time: Mon Oct  7 22:29:47 2019
+Connection: keep-alive time: Mon Oct  7 22:29:47 2019
+Upgrade-Insecure-Requests: 1 time: Mon Oct  7 22:29:47 2019
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36 time: Mon Oct  7 22:29:47 2019
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3 time: Mon Oct  7 22:29:47 2019
+Accept-Encoding: gzip, deflate, br time: Mon Oct  7 22:29:47 2019
+Accept-Language: zh-CN,zh;q=0.9 time: Mon Oct  7 22:29:47 2019
+end accept_request time: Mon Oct  7 22:29:48 2019
+start http request time: Mon Oct  7 22:29:48 2019
+                                  time: Mon Oct  7 22:29:48 2019
+================================= time: Mon Oct  7 22:29:48 2019
+begin accept_request time: Mon Oct  7 22:29:48 2019
+GET /dasdsa HTTP/1.1 time: Mon Oct  7 22:29:48 2019
+Host: 127.0.0.1:8080 time: Mon Oct  7 22:29:48 2019
+Connection: keep-alive time: Mon Oct  7 22:29:48 2019
+Upgrade-Insecure-Requests: 1 time: Mon Oct  7 22:29:48 2019
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36 time: Mon Oct  7 22:29:48 2019
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3 time: Mon Oct  7 22:29:48 2019
+Accept-Encoding: gzip, deflate, br time: Mon Oct  7 22:29:48 2019
+Accept-Language: zh-CN,zh;q=0.9 time: Mon Oct  7 22:29:48 2019
+end accept_request time: Mon Oct  7 22:29:48 2019
+start http request time: Mon Oct  7 22:29:48 2019
+                                  time: Mon Oct  7 22:29:48 2019
+================================= time: Mon Oct  7 22:29:48 2019
+begin accept_request time: Mon Oct  7 22:29:48 2019
+GET /favicon.ico HTTP/1.1 time: Mon Oct  7 22:29:48 2019
+Host: 127.0.0.1:8080 time: Mon Oct  7 22:29:48 2019
+Connection: keep-alive time: Mon Oct  7 22:29:48 2019
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36 time: Mon Oct  7 22:29:48 2019
+Accept: image/webp,image/apng,image/*,*/*;q=0.8 time: Mon Oct  7 22:29:48 2019
+Referer: http://127.0.0.1:8080/dasdsa time: Mon Oct  7 22:29:48 2019
+Accept-Encoding: gzip, deflate, br time: Mon Oct  7 22:29:48 2019
+Accept-Language: zh-CN,zh;q=0.9 time: Mon Oct  7 22:29:48 2019
+end accept_request time: Mon Oct  7 22:29:50 2019
+start http request time: Mon Oct  7 22:29:57 2019
+                                  time: Mon Oct  7 22:29:57 2019
+================================= time: Mon Oct  7 22:29:57 2019
+begin accept_request time: Mon Oct  7 22:29:57 2019
+GET /dasdsa HTTP/1.1 time: Mon Oct  7 22:29:57 2019
+Host: 127.0.0.1:8080 time: Mon Oct  7 22:29:57 2019
+Connection: keep-alive time: Mon Oct  7 22:29:57 2019
+Cache-Control: max-age=0 time: Mon Oct  7 22:29:57 2019
+Upgrade-Insecure-Requests: 1 time: Mon Oct  7 22:29:57 2019
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36 time: Mon Oct  7 22:29:57 2019
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3 time: Mon Oct  7 22:29:57 2019
+Accept-Encoding: gzip, deflate, br time: Mon Oct  7 22:29:57 2019
+Accept-Language: zh-CN,zh;q=0.9 time: Mon Oct  7 22:29:57 2019
+end accept_request time: Mon Oct  7 22:29:59 2019
+start http request time: Mon Oct  7 22:29:59 2019
+                                  time: Mon Oct  7 22:29:59 2019
+================================= time: Mon Oct  7 22:29:59 2019
+begin accept_request time: Mon Oct  7 22:29:59 2019
+GET /favicon.ico HTTP/1.1 time: Mon Oct  7 22:29:59 2019
+Host: 127.0.0.1:8080 time: Mon Oct  7 22:29:59 2019
+Connection: keep-alive time: Mon Oct  7 22:29:59 2019
+Pragma: no-cache time: Mon Oct  7 22:29:59 2019
+Cache-Control: no-cache time: Mon Oct  7 22:29:59 2019
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36 time: Mon Oct  7 22:29:59 2019
+Accept: image/webp,image/apng,image/*,*/*;q=0.8 time: Mon Oct  7 22:29:59 2019
+Referer: http://127.0.0.1:8080/dasdsa time: Mon Oct  7 22:29:59 2019
+Accept-Encoding: gzip, deflate, br time: Mon Oct  7 22:29:59 2019
+Accept-Language: zh-CN,zh;q=0.9 time: Mon Oct  7 22:29:59 2019
+end accept_request time: Mon Oct  7 22:29:59 2019
+start http request time: Mon Oct  7 22:30:02 2019
+                                  time: Mon Oct  7 22:30:02 2019
+================================= time: Mon Oct  7 22:30:02 2019
+begin accept_request time: Mon Oct  7 22:30:02 2019
+GET /dasdsa HTTP/1.1 time: Mon Oct  7 22:30:02 2019
+Host: 127.0.0.1:8080 time: Mon Oct  7 22:30:02 2019
+Connection: keep-alive time: Mon Oct  7 22:30:02 2019
+Cache-Control: max-age=0 time: Mon Oct  7 22:30:02 2019
+Upgrade-Insecure-Requests: 1 time: Mon Oct  7 22:30:02 2019
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36 time: Mon Oct  7 22:30:02 2019
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3 time: Mon Oct  7 22:30:02 2019
+Accept-Encoding: gzip, deflate, br time: Mon Oct  7 22:30:02 2019
+Accept-Language: zh-CN,zh;q=0.9 time: Mon Oct  7 22:30:02 2019
+end accept_request time: Mon Oct  7 22:30:03 2019
+start http request time: Mon Oct  7 22:30:03 2019
+                                  time: Mon Oct  7 22:30:03 2019
+================================= time: Mon Oct  7 22:30:03 2019
+begin accept_request time: Mon Oct  7 22:30:03 2019
+GET /favicon.ico HTTP/1.1 time: Mon Oct  7 22:30:03 2019
+Host: 127.0.0.1:8080 time: Mon Oct  7 22:30:03 2019
+Connection: keep-alive time: Mon Oct  7 22:30:03 2019
+Pragma: no-cache time: Mon Oct  7 22:30:03 2019
+Cache-Control: no-cache time: Mon Oct  7 22:30:03 2019
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36 time: Mon Oct  7 22:30:03 2019
+Accept: image/webp,image/apng,image/*,*/*;q=0.8 time: Mon Oct  7 22:30:03 2019
+Referer: http://127.0.0.1:8080/dasdsa time: Mon Oct  7 22:30:03 2019
+Accept-Encoding: gzip, deflate, br time: Mon Oct  7 22:30:03 2019
+Accept-Language: zh-CN,zh;q=0.9 time: Mon Oct  7 22:30:03 2019
+end accept_request time: Mon Oct  7 22:30:04 2019
+start http request time: Mon Oct  7 22:30:06 2019
+                                  time: Mon Oct  7 22:30:06 2019
+================================= time: Mon Oct  7 22:30:06 2019
+begin accept_request time: Mon Oct  7 22:30:06 2019
+Confusing HTTP data: empty time: Mon Oct  7 22:30:25 2019
+end accept_request time: Mon Oct  7 22:30:26 2019
+start http request time: Mon Oct  7 22:30:26 2019
+                                  time: Mon Oct  7 22:30:26 2019
+================================= time: Mon Oct  7 22:30:26 2019
+begin accept_request time: Mon Oct  7 22:30:26 2019
+GET /dasdsa HTTP/1.1 time: Mon Oct  7 22:30:26 2019
+Host: 127.0.0.1:8080 time: Mon Oct  7 22:30:26 2019
+Connection: keep-alive time: Mon Oct  7 22:30:26 2019
+Cache-Control: max-age=0 time: Mon Oct  7 22:30:26 2019
+Upgrade-Insecure-Requests: 1 time: Mon Oct  7 22:30:26 2019
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36 time: Mon Oct  7 22:30:26 2019
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3 time: Mon Oct  7 22:30:26 2019
+Accept-Encoding: gzip, deflate, br time: Mon Oct  7 22:30:26 2019
+Accept-Language: zh-CN,zh;q=0.9 time: Mon Oct  7 22:30:26 2019
+end accept_request time: Mon Oct  7 22:30:27 2019
+start http request time: Mon Oct  7 22:30:27 2019
+                                  time: Mon Oct  7 22:30:27 2019
+================================= time: Mon Oct  7 22:30:27 2019
+begin accept_request time: Mon Oct  7 22:30:27 2019
+Confusing HTTP data: empty time: Mon Oct  7 22:30:31 2019
