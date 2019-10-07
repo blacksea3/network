@@ -77,12 +77,12 @@ void HttpServer::RunServer()
 		if (this->clientSockID == -1)
 			throw new std::exception("client socket accept error");
 
-		//accept_request((void *)(intptr_t)client_sock);  //单线程
+		//acceptRequestThread((void *)(intptr_t)this->clientSockID);  //单线程
 
 		 //每次收到请求，创建一个线程来处理接受到的请求
 		 //把client_sock转成地址作为参数传入
 		std::thread t1(acceptRequestThread, (void *)(intptr_t)this->clientSockID);
-		t1.join();
+		t1.join();   //等待t1结束
 	}
 	closesocket(this->serverSockID);
 	int r = WSACleanup();

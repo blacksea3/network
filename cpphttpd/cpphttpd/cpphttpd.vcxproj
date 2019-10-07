@@ -155,11 +155,13 @@
     <ClCompile Include="HttpRequest.cpp" />
     <ClCompile Include="HttpServer.cpp" />
     <ClCompile Include="HttpStringParser.cpp" />
+    <ClCompile Include="Log.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="HttpRequest.h" />
     <ClInclude Include="HttpServer.h" />
     <ClInclude Include="HttpStringParser.h" />
+    <ClInclude Include="Log.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

@@ -53,120 +53,111 @@ int HttpRequest::getLine(int sock, char * buf, int size)
 	return(i);
 }
 
-/*
- * 通常响应, 200
- * s: 备选字符串, isRenderFile: 是否用文件内容
- */
-void HttpRequest::CommonResponse(std::string s)
+std::vector<std::string> HttpRequest::getRequestContent()
 {
-	FILE *resource = NULL;
-	errno_t err;
-	err = fopen_s(&resource, s.c_str(), "r");
-	if (err != 0)
-	{
-		this->NotFound("url file not found", true);
-	}
+	std::vector<std::string> res;
+	char buf[1024];
+	int numchars = this->getLine(this->clientSocketID, buf, sizeof(buf));;
+	if (numchars == 0) return res;
 	else
+	{
+		res.emplace_back(std::string(buf));
+		while (true)
+		{
+			numchars = this->getLine(this->clientSocketID, buf, sizeof(buf));
+			if (!((numchars > 0) && strcmp("\n", buf))) break;
+			else
+			{
+				res.emplace_back(std::string(buf));
+			}
+		}
+	}
+	return res;
+}
+
+/*
+ * 通用请求
+ * s: 备选字符串, 对于非200响应是默认发送消息, 对于200响应是文件路径
+ *  , isRenderFile: 是否用文件内容, (enum)en请求类型
+ */
+void HttpRequest::CommonResponse(std::string s, bool isRenderFile, enum HTTPCODE hc)
+{
+	switch (hc)
+	{
+	case HttpRequest::HTTP200:
 	{
 		send(this->clientSocketID, this->HTTP_CODE200.c_str(), (int)this->HTTP_CODE200.size(), 0);
-		send(this->clientSocketID, this->HTTP_SERVER.c_str(), (int)this->HTTP_SERVER.size(), 0);
-		send(this->clientSocketID, this->HTTP_CHARSET.c_str(), (int)this->HTTP_CHARSET.size(), 0);
-		send(this->clientSocketID, this->HTTP_EMPTR_LINE.c_str(), (int)this->HTTP_EMPTR_LINE.size(), 0);
-		this->SendFileContent(resource);
+		break;
 	}
-}
-
-/*
- * 找不到
- * s: 备选字符串, isRenderFile: 是否用文件内容
- */
-void HttpRequest::NotFound(std::string s, bool isRenderFile)
-{
-	send(this->clientSocketID, this->HTTP_CODE404.c_str(), (int)this->HTTP_CODE404.size(), 0);
+	case HttpRequest::HTTP404:
+	{
+		send(this->clientSocketID, this->HTTP_CODE404.c_str(), (int)this->HTTP_CODE404.size(), 0);
+		break;
+	}
+	case HttpRequest::HTTP400:
+	{
+		send(this->clientSocketID, this->HTTP_CODE400.c_str(), (int)this->HTTP_CODE400.size(), 0);
+		break;
+	}
+	case HttpRequest::HTTP500:
+	{
+		send(this->clientSocketID, this->HTTP_CODE500.c_str(), (int)this->HTTP_CODE500.size(), 0);
+		break;
+	}
+	case HttpRequest::HTTP501:
+	{
+		send(this->clientSocketID, this->HTTP_CODE501.c_str(), (int)this->HTTP_CODE501.size(), 0);
+		break;
+	}
+	default:
+		break;
+	}
 	send(this->clientSocketID, this->HTTP_SERVER.c_str(), (int)this->HTTP_SERVER.size(), 0);
 	send(this->clientSocketID, this->HTTP_CHARSET.c_str(), (int)this->HTTP_CHARSET.size(), 0);
 	send(this->clientSocketID, this->HTTP_EMPTR_LINE.c_str(), (int)this->HTTP_EMPTR_LINE.size(), 0);
 	if (isRenderFile)
 	{
-		if (!this->SendFileContent(FILE_NOTFOUND.c_str()))
-			send(this->clientSocketID, s.c_str(), (int)s.size(), 0);
+		switch (hc)
+		{
+		case HttpRequest::HTTP200:
+		{
+			if (!this->SendFileContent(s.c_str()))
+			{
+				if (!this->SendFileContent(FILE_NOTFOUND.c_str()))
+					send(this->clientSocketID, "url file not found", (int)s.size(), 0);
+			}
+			break;
+		}
+		case HttpRequest::HTTP404:
+		{
+			if (!this->SendFileContent(FILE_NOTFOUND.c_str()))
+				send(this->clientSocketID, s.c_str(), (int)s.size(), 0);
+			break;
+		}
+		case HttpRequest::HTTP400:
+		{
+			if (!this->SendFileContent(FILE_BAD_REQUEST.c_str()))
+				send(this->clientSocketID, s.c_str(), (int)s.size(), 0);
+			break;
+		}
+		case HttpRequest::HTTP500:
+		{
+			if (!this->SendFileContent(FILE_INTERNAL_SERVER_ERROR.c_str()))
+				send(this->clientSocketID, s.c_str(), (int)s.size(), 0);
+			break;
+		}
+		case HttpRequest::HTTP501:
+		{
+			if (!this->SendFileContent(FILE_METHOD_NOT_IMPLEMENTED.c_str()))
+				send(this->clientSocketID, s.c_str(), (int)s.size(), 0);
+			break;
+		}
+		default:
+			break;
+		}
 	}
 	else
 		send(this->clientSocketID, s.c_str(), (int)s.size(), 0);
-}
-
-/*
- * 请求错误
- * s: 备选字符串, isRenderFile: 是否用文件内容
- */
-void HttpRequest::BadRequest(std::string s, bool isRenderFile)
-{
-	send(this->clientSocketID, this->HTTP_CODE400.c_str(), (int)this->HTTP_CODE400.size(), 0);
-	send(this->clientSocketID, this->HTTP_SERVER.c_str(), (int)this->HTTP_SERVER.size(), 0);
-	send(this->clientSocketID, this->HTTP_CHARSET.c_str(), (int)this->HTTP_CHARSET.size(), 0);
-	send(this->clientSocketID, this->HTTP_EMPTR_LINE.c_str(), (int)this->HTTP_EMPTR_LINE.size(), 0);
-	if (isRenderFile)
-	{
-		if (!this->SendFileContent(FILE_BAD_REQUEST.c_str()))
-			send(this->clientSocketID, s.c_str(), (int)s.size(), 0);
-	}
-	else
-		send(this->clientSocketID, s.c_str(), (int)s.size(), 0);
-}
-
-/*
- * 方法未实现
- * s: 备选字符串, isRenderFile: 是否用文件内容
- */
-void HttpRequest::MethodNotImplemented(std::string s, bool isRenderFile)
-{
-	send(this->clientSocketID, this->HTTP_CODE501.c_str(), (int)this->HTTP_CODE501.size(), 0);
-	send(this->clientSocketID, this->HTTP_SERVER.c_str(), (int)this->HTTP_SERVER.size(), 0);
-	send(this->clientSocketID, this->HTTP_CHARSET.c_str(), (int)this->HTTP_CHARSET.size(), 0);
-	send(this->clientSocketID, this->HTTP_EMPTR_LINE.c_str(), (int)this->HTTP_EMPTR_LINE.size(), 0);
-	if (isRenderFile)
-	{
-		if (!this->SendFileContent(FILE_METHOD_NOT_IMPLEMENTED.c_str()))
-			send(this->clientSocketID, s.c_str(), (int)s.size(), 0);
-	}
-	else
-		send(this->clientSocketID, s.c_str(), (int)s.size(), 0);
-}
-
-/*
- * 内部错误
- * s: 备选字符串, isRenderFile: 是否用文件内容
- */
-void HttpRequest::InternalServerError(std::string s, bool isRenderFile)
-{
-	send(this->clientSocketID, this->HTTP_CODE500.c_str(), (int)this->HTTP_CODE500.size(), 0);
-	send(this->clientSocketID, this->HTTP_SERVER.c_str(), (int)this->HTTP_SERVER.size(), 0);
-	send(this->clientSocketID, this->HTTP_CHARSET.c_str(), (int)this->HTTP_CHARSET.size(), 0);
-	send(this->clientSocketID, this->HTTP_EMPTR_LINE.c_str(), (int)this->HTTP_EMPTR_LINE.size(), 0);
-	if (isRenderFile)
-	{
-		if (!this->SendFileContent(FILE_INTERNAL_SERVER_ERROR.c_str()))
-			send(this->clientSocketID, s.c_str(), (int)s.size(), 0);
-	}
-	else
-		send(this->clientSocketID, s.c_str(), (int)s.size(), 0);
-}
-
-/*
- * 发送文件内容, 外部已经确认文件存在
- */
-void HttpRequest::SendFileContent(FILE *resource)
-{
-	char buf[1024];
-	fgets(buf, sizeof(buf), resource);
-	//循环读
-	while (!feof(resource))
-	{
-		send(this->clientSocketID, buf, strlen(buf), 0);
-		fgets(buf, sizeof(buf), resource);
-	}
-	if (strlen(buf) != 0) send(this->clientSocketID, buf, strlen(buf), 0);
-	fclose(resource);
 }
 
 /*
@@ -195,14 +186,12 @@ bool HttpRequest::SendFileContent(const char * filename)
 	}
 }
 
-
-
 /*
  * HttpRequest类初始化, 仅初始化客户端SocketID
  */
 HttpRequest::HttpRequest(int c) :clientSocketID(c)
 {
-	;
+	pmLog = Mlog::Instance();
 }
 
 /*
@@ -210,61 +199,22 @@ HttpRequest::HttpRequest(int c) :clientSocketID(c)
  */
 void HttpRequest::acceptRequestInterface()
 {
-	//socket
-	std::ofstream file;
-	file.open(filename, std::ios::out | std::ios::app);
+	//获取请求数据
+	pmLog->print(this->filename, "                                 ");
+	pmLog->print(this->filename, "=================================");
+	pmLog->print(this->filename, "begin accept_request");
+	std::vector<std::string> requestContent =  this->getRequestContent();
 
-	char buf[1024];
-	std::string sbuf;
-	int numchars;
-	//int cgi = 0;     becomes true if server decides this is a CGI program 
+	//打印request所有信息
+	for (auto& rC : requestContent) pmLog->print(this->filename, rC);
 
-	//获取第一行
-	numchars = this->getLine(this->clientSocketID, buf, sizeof(buf));
-
-	if (numchars == 0)
-	{
-		file << "begin accept_request:" << std::endl;
-		file << "Confusing HTTP data: empty" << std::endl;
-		file << "end accept_request:" << std::endl << std::endl;
-	}
+	if (requestContent.empty())
+		pmLog->print(this->filename, "Confusing HTTP data: empty");
 	else if (PRINT_ALL_RAW_DATA_DEBUG)
-	{
-		file << "begin accept_request:" << std::endl;
-		sbuf = std::string(buf);
-		file << sbuf.c_str();
-		int dump = 0;
-
-		//读取后续信息并抛弃
-		while ((numchars > 0) && strcmp("\n", buf))
-		{
-			numchars = this->getLine(this->clientSocketID, buf, sizeof(buf));
-			sbuf = std::string(buf);
-			dump++;
-			file << sbuf.c_str();
-		}
-		//bad_request(client);
 		this->NotFound("NOT FOUNDDDDD", true);
-		file << "end accept_request:" << std::endl << std::endl;
-	}
 	else
 	{
-		file << "begin accept_request:" << std::endl;
-		sbuf = std::string(buf);
-		file << sbuf.c_str();
-		int dump = 0;
-
-		httpMethodStr hms = parserFirstLine(sbuf);   //解析第一行字符串
-
-		//读取后续信息并抛弃
-		while ((numchars > 0) && strcmp("\n", buf))
-		{
-			numchars = this->getLine(this->clientSocketID, buf, sizeof(buf));
-			sbuf = std::string(buf);
-			dump++;
-			file << sbuf.c_str();
-		}
-
+		httpMethodStr hms = parserFirstLine(requestContent[0]);   //解析第一行字符串
 		if (hms.httpMethod == HTTPMETHOD::HTTPMETHOD_OTHER)
 		{
 			this->MethodNotImplemented("NOT IMPLEMENTED!!", true);
@@ -282,21 +232,24 @@ void HttpRequest::acceptRequestInterface()
 			if (hms.dir[0] == '\\') hms.dir.erase(hms.dir.begin());
 
 			std::string fullPath = dir + "\\" + hms.dir;
-			this->CommonResponse(fullPath);
+			this->NormalRequest(fullPath, true);
 			//执行cgi文件
 			//execute_cgi(client, path, method, query_string);
 		}
-		file << "end accept_request:" << std::endl << std::endl;
 	}
-
+	pmLog->print(this->filename, "end accept_request");
 	//执行完毕关闭socket
 	closesocket(this->clientSocketID);
-	file.close();
+}
+
+void HttpRequest::closeRequestInterface()
+{
+	this->pmLog->destroy();
 }
 
 HttpRequest::~HttpRequest()
 {
-
+    
 }
 
 /*
@@ -307,4 +260,5 @@ void acceptRequestThread(void *arg)
 	int client = (intptr_t)arg;
 	HttpRequest h(client);
 	h.acceptRequestInterface();
+	h.closeRequestInterface();
 }
