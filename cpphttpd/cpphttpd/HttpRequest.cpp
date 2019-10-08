@@ -163,12 +163,17 @@ void HttpRequest::CommonResponse(std::string s, bool isRenderFile, enum HTTPCODE
 /*
  * 发送文件内容
  * 返回true说明文件存在发送成功, false说明文件不存在, 需要调用者自行处理content内容
+ *    注意: 此处用到工作目录, filename 按照如下格式html/404.html
+ *    因此: 用filesystem库格式化这个目录, 再用C api进行文件读写
  */
 bool HttpRequest::SendFileContent(const char * filename)
 {
+	std::filesystem::path filePath = std::filesystem::absolute(filename);
+	std::string windowsTypePath = filePath.string();
+
 	FILE *resource = NULL;
 	errno_t err;
-	err = fopen_s(&resource, filename, "r");
+	err = fopen_s(&resource, windowsTypePath.c_str(), "r");
 	if (err != 0) return false;
 	else
 	{
@@ -187,7 +192,8 @@ bool HttpRequest::SendFileContent(const char * filename)
 }
 
 /*
- * HttpRequest类初始化, 仅初始化客户端SocketID
+ * HttpRequest类初始化, 初始化客户端SocketID
+ * 初始化项目目录
  */
 HttpRequest::HttpRequest(int c) :clientSocketID(c)
 {

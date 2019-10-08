@@ -1,5 +1,6 @@
 #VS2017 temp files
 cpphttpd/.vs/*
+cpphttpd/Debug/*
 cpphttpd/cpphttpd/Debug/*
 
 # Byte-compiled / optimized / DLL files

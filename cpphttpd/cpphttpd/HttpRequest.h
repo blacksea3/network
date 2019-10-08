@@ -8,11 +8,10 @@
 
 class HttpRequest
 {
-	//类常量
 private:
+	//类常量-恒定内容
 	enum HTTPCODE{HTTP200, HTTP404, HTTP400, HTTP500, HTTP501};
-
-	const std::string filename = "D:\\PC\\GitFiles\\network\\cpphttpd\\log\\log.txt";  //日志文件路径
+	const std::string filename = "log/log.txt";                   //日志文件路径
 	const std::string HTTP_CODE200 = "HTTP/1.1 200 OK\r\n";
 	const std::string HTTP_CODE404 = "HTTP/1.1 404 NOT FOUND\r\n";
 	const std::string HTTP_CODE400 = "HTTP/1.1 400 BAD REQUEST\r\n";
@@ -22,12 +21,13 @@ private:
 	const std::string HTTP_CHARSET = "Content-Type: text/html;charset=utf-8\r\n";
 	const std::string HTTP_EMPTR_LINE = "\r\n";
 
-	const std::string FILE_NOTFOUND = "D:\\PC\\GitFiles\\network\\cpphttpd\\html\\404.html";
-	const std::string FILE_BAD_REQUEST = "D:\\PC\\GitFiles\\network\\cpphttpd\\html\\400.html";
-	const std::string FILE_METHOD_NOT_IMPLEMENTED = "D:\\PC\\GitFiles\\network\\cpphttpd\\html\\501.html";
-	const std::string FILE_INTERNAL_SERVER_ERROR = "D:\\PC\\GitFiles\\network\\cpphttpd\\html\\500.html";
+	const std::string FILE_NOTFOUND = "html/404.html";
+	const std::string FILE_BAD_REQUEST = "html/400.html";
+	const std::string FILE_METHOD_NOT_IMPLEMENTED = "html/501.html";
+	const std::string FILE_INTERNAL_SERVER_ERROR = "html/500.html";
 
-	const bool PRINT_ALL_RAW_DATA_DEBUG = false;
+	//类常量-设置
+	const bool PRINT_ALL_RAW_DATA_DEBUG = false;  //如果true: 仅打印所有请求信息, 全部按照404响应(或其他单一响应), 否则正常响应
 
 private:  //私有变量
 	int clientSocketID;   //客户端SocketID

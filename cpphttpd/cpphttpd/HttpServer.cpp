@@ -13,14 +13,22 @@ HttpServer::HttpServer():clientSockID(-1), acceptCount(0),
 
 /*
  * 初始化服务器
- * 现在仅仅是加载Ws2_32.dll
+ * 加载Ws2_32.dll, 生成项目目录
  */
 void HttpServer::InitServer()
 {
 	WSADATA wsaData;
 
 	if (WSAStartup(MAKEWORD(2, 2), &wsaData) != 0)
+	{
 		throw new std::exception("cannot load ws2_32.dll?");
+	}
+
+	if (useParentDir)
+	{
+		std::filesystem::path parentFullPath = std::filesystem::absolute(std::filesystem::path("../"));
+		std::filesystem::current_path(parentFullPath);
+	}
 }
 
 /*
@@ -102,6 +110,25 @@ HttpServer::~HttpServer()
 
 int main()
 {
+	/*
+	std::filesystem::path cur = std::filesystem::current_path();
+	std::filesystem::path curFullPath = std::filesystem::absolute(std::filesystem::path("./"));
+	
+	std::filesystem::path parent("../");
+	std::filesystem::path parentFullPath = std::filesystem::absolute(parent);
+	std::cout << cur << std::endl;
+	std::cout << curFullPath << std::endl;
+	std::cout << parent << std::endl;
+	std::cout << parentFullPath << std::endl;
+
+	std::filesystem::current_path(parentFullPath);
+	std::filesystem::path logTxt = std::filesystem::absolute(std::filesystem::path("log/log.txt"));
+	std::filesystem::path htmlDir = std::filesystem::absolute(std::filesystem::path("html/"));
+
+	std::cout << std::filesystem::current_path() << std::endl;
+	std::cout << logTxt << std::endl;
+	std::cout << htmlDir << std::endl;*/
+
 	HttpServer hs = HttpServer();
 	hs.InitServer();
 	hs.RunServer();

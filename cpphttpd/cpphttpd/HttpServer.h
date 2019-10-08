@@ -7,7 +7,7 @@
 #include <windows.h>
 #include <ws2tcpip.h>
 #include <thread>
-
+#include <filesystem>
 #include "HttpRequest.h"
 
 class HttpServer
@@ -23,6 +23,8 @@ private:
 	socklen_t clientNameLength;							//客户端名字字节大小
 
 	int StartServer(u_short *port);
+
+	const bool useParentDir = true;  //如果true, 使用当前目录的父目录作为项目目录, 否则直接将当前目录作为项目目录
 public:
 	HttpServer();
 	void InitServer();
