@@ -13,7 +13,7 @@
 class HttpServer
 {
 private:
-	const u_short DEFAULTPORT = 8080;				    //默认端口
+	const u_short DEFAULTPORT = 8090;				    //默认端口
 	u_short port;                                       //当前端口
 
 	int serverSockID;                                   //服务端socket ID

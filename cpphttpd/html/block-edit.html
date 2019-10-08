@@ -1,0 +1,54 @@
+{% extends "blog/base.html" %}
+{% load staticfiles %}
+
+
+{% block uniquecss %}
+<link rel="stylesheet" type="text/css" href="{% static 'blog/static/h-ui.admin/skin/default/skin.css' %}" id="skin" />
+<link rel="stylesheet" type="text/css" href="{% static 'blog/static/h-ui.admin/css/style.css' %}" />
+{% endblock uniquecss %}
+
+{% block uniquetitle %}
+<title>编辑板块 - 资讯管理 - H-ui.admin v3.1</title>
+<meta name="keywords" content="H-ui.admin v3.1,H-ui网站后台模版,后台模版下载,后台管理系统模版,HTML后台模版下载">
+<meta name="description" content="H-ui.admin v3.1，是一款由国人开发的轻量级扁平化网站后台模板，完全免费开源的网站后台管理系统模版，适合中小型CMS后台系统。">
+{% endblock uniquetitle %}
+
+{% block body %}
+<article class="page-container">
+	<form class="form form-horizontal" id="form-block-edit">
+		{% csrf_token %}
+		<div id="blockid" style="display:none">{{block_data.0.id}}</div>
+		<div class="row cl">
+			<label class="form-label col-xs-4 col-sm-2"><span class="c-red">*</span>板块标题：</label>
+			<div class="formControls col-xs-8 col-sm-9">
+				<input type="text" class="input-text" value="{{block_data.0.title}}" placeholder="" id="blocktitle" name="blocktitle">
+			</div>
+		</div>
+		<div class="row cl">
+			<label class="form-label col-xs-4 col-sm-2">板块描述：</label>
+			<div class="formControls col-xs-8 col-sm-9">
+				<textarea name="blockdescription" id="blockdescription" cols="" rows="" class="textarea">{{block_data.0.description}}</textarea>
+			</div>
+		</div>
+		<div class="row cl">
+			<label class="form-label col-xs-4 col-sm-2">板块备注：</label>
+			<div class="formControls col-xs-8 col-sm-9">
+				<textarea name="blockremark" id="blockremark" cols="" rows="" class="textarea">{{block_data.0.remark}}</textarea>
+			</div>
+		</div>		
+		<div class="row cl">
+			<div class="col-xs-8 col-sm-9 col-xs-offset-4 col-sm-offset-2">
+				<button class="btn btn-primary radius" type="submit"><i class="Hui-iconfont">&#xe632;</i> 保存并提交审核</button>
+				<!--暂时不实现<button onClick="article_save();" class="btn btn-secondary radius" type="button"><i class="Hui-iconfont">&#xe632;</i> 保存草稿</button>-->
+				<button onClick="removeIframe();" class="btn btn-default radius" type="button">&nbsp;&nbsp;取消&nbsp;&nbsp;</button>
+			</div>
+		</div>
+	</form>
+</article>
+
+{% endblock body %}
+
+{% block uniquelastjs %}
+<script type="text/javascript" src="{% static 'blog/lib/My97DatePicker/4.8/WdatePicker.js' %}"></script>
+<script type="text/javascript" src="{% static 'blog/scripts/block-edit.js' %}"></script>
+{% endblock uniquelastjs %}

@@ -232,13 +232,17 @@ void HttpRequest::acceptRequestInterface()
 		else if (hms.httpMethod == HTTPMETHOD::HTTPMETHOD_GET_COMMON ||
 			hms.httpMethod == HTTPMETHOD::HTTPMETHOD_POST)   //查找文件
 		{
-			std::fstream _file;
-			std::string dir = GetProgramDir();
-			std::replace(hms.dir.begin(), hms.dir.end(), '/', '\\');
-			if (hms.dir[0] == '\\') hms.dir.erase(hms.dir.begin());
-
-			std::string fullPath = dir + "\\" + hms.dir;
-			this->NormalRequest(fullPath, true);
+			//this->NotFound("NOT FOUNDDDDD", true);
+			//如果hms.dir为空, 则使用DEFAULT_FILE
+			//否则如果hms.dir[0] == '/'则去除头部(实际上一定是'/')再用hms.dir
+			//否则直接用hms.dir
+			if (hms.dir.empty()) this->NormalRequest(DEFAULT_FILE, true);
+			else if (hms.dir[0] == '/')
+			{
+				hms.dir.erase(hms.dir.begin());
+				this->NormalRequest(hms.dir, true);
+			}
+			else this->NormalRequest(hms.dir, true);
 			//执行cgi文件
 			//execute_cgi(client, path, method, query_string);
 		}

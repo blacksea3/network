@@ -1,0 +1,84 @@
+{% extends "blog/base.html" %}
+{% load staticfiles %}
+
+
+{% block uniquecss %}
+<link rel="stylesheet" type="text/css" href="{% static 'blog/static/h-ui.admin/skin/default/skin.css' %}" id="skin" />
+<link rel="stylesheet" type="text/css" href="{% static 'blog/static/h-ui.admin/css/style.css' %}" />
+{% endblock uniquecss %}
+
+{% block uniquetitle %}
+<title>新增文章 - 资讯管理 - H-ui.admin v3.1</title>
+<meta name="keywords" content="H-ui.admin v3.1,H-ui网站后台模版,后台模版下载,后台管理系统模版,HTML后台模版下载">
+<meta name="description" content="H-ui.admin v3.1，是一款由国人开发的轻量级扁平化网站后台模板，完全免费开源的网站后台管理系统模版，适合中小型CMS后台系统。">
+<script src="{% static 'blog/ckeditor/ckeditor/ckeditor.js' %}"></script>
+{% endblock uniquetitle %}
+
+{% block body %}
+<article class="page-container">
+	<form class="form form-horizontal" id="form-article-add">
+		{% csrf_token %}
+		<div class="row cl">
+			<label class="form-label col-xs-4 col-sm-2"><span class="c-red">*</span>文章标题：</label>
+			<div class="formControls col-xs-8 col-sm-9">
+				<input type="text" class="input-text" value="" placeholder="" id="articletitle" name="articletitle">
+			</div>
+		</div>
+		<div class="row cl">
+			<label class="form-label col-xs-4 col-sm-2"><span class="c-red">*</span>分类栏目：</label>
+			<div class="formControls col-xs-8 col-sm-9">
+				<span class="select-box">
+				<select name="articlecolumn" id="articlecolumn" class="select">
+				{% for block in block_data %}
+					<option value="{{block.id}}">{{block.title}}</option>
+				{% endfor %}	
+				</select>
+				</span> 
+			</div>
+		</div>
+		<div class="row cl">
+			<label class="form-label col-xs-4 col-sm-2">文章内容：</label>
+			<div class="formControls col-xs-8 col-sm-9">
+				<textarea name="articlecontent" id="articlecontent"></textarea>
+			</div>
+		</div>
+		<div class="row cl">
+			<label class="form-label col-xs-4 col-sm-2">文章备注：</label>
+			<div class="formControls col-xs-8 col-sm-9">
+				<textarea name="articleremark" id="articleremark" cols="" rows="" class="textarea"></textarea>
+			</div>
+		</div>
+		<div class="row cl">
+			<label class="form-label col-xs-4 col-sm-2">缩略图：</label>
+			<div class="formControls col-xs-8 col-sm-9">
+				<div class="uploader-thum-container">
+					<div id="fileList" class="uploader-list"></div>
+					<div id="filePicker">选择图片</div>
+					<input type="file" id="articleimgfile" name="articleimgfile" /> <br />
+					<input onClick="imgupload();" type="button" id="articleupload" class="but_yellow" value="上传图片" >
+				</div>
+			</div>
+		</div>
+		<!--隐藏信息-->
+		<div class="row cl">
+			<label class="form-label col-xs-4 col-sm-2" id="hiddeninfo" style="visibility:hidden;"></label>
+		</div>			
+		<div class="row cl">
+			<div class="col-xs-8 col-sm-9 col-xs-offset-4 col-sm-offset-2">
+				<button class="btn btn-primary radius" type="submit"><i class="Hui-iconfont">&#xe632;</i> 保存并提交审核</button>
+				<!--暂时不实现<button onClick="article_save();" class="btn btn-secondary radius" type="button"><i class="Hui-iconfont">&#xe632;</i> 保存草稿</button>-->
+				<button onClick="removeIframe();" class="btn btn-default radius" type="button">&nbsp;&nbsp;取消&nbsp;&nbsp;</button>
+			</div>
+		</div>
+	</form>
+</article>
+
+{% endblock body %}
+
+{% block uniquelastjs %}
+<script type="text/javascript" src="{% static 'blog/lib/My97DatePicker/4.8/WdatePicker.js' %}"></script>
+<script type="text/javascript" src="{% static 'blog/scripts/article-add.js' %}"></script>
+<script>
+    CKEDITOR.replace( 'articlecontent' , {uiColor: '#9AB8F3'});
+</script>
+{% endblock uniquelastjs %}

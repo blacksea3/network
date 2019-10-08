@@ -1,0 +1,76 @@
+﻿{% extends "blog/base.html" %}
+{% load staticfiles %}
+
+{% block uniquecss %}
+<link href="{% static 'blog/static/h-ui.admin/css/H-ui.login.css' %}" rel="stylesheet" type="text/css" />
+{% endblock uniquecss %}
+
+{% block uniquetitle %}
+<title>后台登录 - H-ui.admin v3.1</title>
+<meta name="keywords" content="H-ui.admin v3.1,H-ui网站后台模版,后台模版下载,后台管理系统模版,HTML后台模版下载">
+<meta name="description" content="H-ui.admin v3.1，是一款由国人开发的轻量级扁平化网站后台模板，完全免费开源的网站后台管理系统模版，适合中小型CMS后台系统。">
+{% endblock uniquetitle %}
+
+{% block body %}
+<input type="hidden" id="TenantId" name="TenantId" value="" />
+<div class="header"></div>
+<div class="loginWraper">
+	<div id="loginform" class="loginBox">
+		<form class="form form-horizontal" action="index.html" method="post">
+		<!--账号-->
+		<div class="row cl">
+			<label class="form-label col-xs-3"><i class="Hui-iconfont">&#xe60d;</i></label>
+			<div class="formControls col-xs-8">
+				<input id="username" name="" type="text" placeholder="账户" class="input-text size-L">
+			</div>
+		</div>
+		<!--密码-->
+		<div class="row cl">
+			<label class="form-label col-xs-3"><i class="Hui-iconfont">&#xe60e;</i></label>
+			<div class="formControls col-xs-8">
+				<input id="password" name="" type="password" placeholder="密码" class="input-text size-L">
+			</div>
+		</div>
+		<!--验证码,未实现-->
+		<!--
+		<div class="row cl">
+			<div class="formControls col-xs-8 col-xs-offset-3">
+			<input class="input-text size-L" type="text" placeholder="验证码" onblur="if(this.value==''){this.value='验证码:'}" onclick="if(this.value=='验证码:'){this.value='';}" value="验证码:" style="width:150px;">
+			<img src=""> <a id="kanbuq" href="javascript:;">看不清，换一张</a> </div>
+		</div>
+		-->
+		<!--保持登陆状态-->
+		<div class="row cl">
+			<div class="formControls col-xs-8 col-xs-offset-3">
+				<label for="online">
+				<input type="checkbox" name="online" id="online" value="12">
+				使我保持登录状态
+				</label>
+			</div>
+			<!--隐藏信息-->
+			<div class="formControls col-xs-8 col-xs-offset-3">
+				<label id="hiddeninfo" style="visibility:hidden;color:red;">
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+				</label>
+			</div>
+		</div>
+		<!--提交和取消按钮-->
+		<div class="row cl">
+			{% csrf_token %}
+			<div class="formControls col-xs-8 col-xs-offset-3">
+				<input id="login" name=""  type="button" 
+					class="btn btn-success radius size-L" 
+					value="&nbsp;登&nbsp;&nbsp;&nbsp;&nbsp;录&nbsp;"></button>
+				<input id="cancel" name="" type="button" 
+					class="btn btn-default radius size-L" 
+					value="&nbsp;取&nbsp;&nbsp;&nbsp;&nbsp;消&nbsp;"></button>
+			</div>
+		</div>
+		</form>
+	</div>
+</div>
+{% endblock body %}
+
+{% block uniquelastjs %}
+<script type="text/javascript" src="{% static 'blog/scripts/login.js' %}"></script>
+{% endblock uniquelastjs %}

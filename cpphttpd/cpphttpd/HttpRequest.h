@@ -26,6 +26,8 @@ private:
 	const std::string FILE_METHOD_NOT_IMPLEMENTED = "html/501.html";
 	const std::string FILE_INTERNAL_SERVER_ERROR = "html/500.html";
 
+	const std::string DEFAULT_FILE = "index.html";
+
 	//类常量-设置
 	const bool PRINT_ALL_RAW_DATA_DEBUG = false;  //如果true: 仅打印所有请求信息, 全部按照404响应(或其他单一响应), 否则正常响应
 
