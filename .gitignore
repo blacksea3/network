@@ -3,6 +3,10 @@ cpphttpd/.vs/*
 cpphttpd/Debug/*
 cpphttpd/cpphttpd/Debug/*
 
+cppcilent/.vs/*
+cppcilent/Debug/*
+cppcilent/cppcilent/Debug/*
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
