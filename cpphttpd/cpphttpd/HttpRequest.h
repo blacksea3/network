@@ -11,7 +11,7 @@ class HttpRequest
 private:
 	//类常量-恒定内容
 	enum HTTPCODE{HTTP200, HTTP404, HTTP400, HTTP500, HTTP501};
-	const std::string filename = "log/log.txt";                   //日志文件路径
+	const std::string LOGFILENAME = "log/log.txt";                   //日志文件路径
 	const std::string HTTP_CODE200 = "HTTP/1.1 200 OK\r\n";
 	const std::string HTTP_CODE404 = "HTTP/1.1 404 NOT FOUND\r\n";
 	const std::string HTTP_CODE400 = "HTTP/1.1 400 BAD REQUEST\r\n";
@@ -32,7 +32,7 @@ private:
 	const bool PRINT_ALL_RAW_DATA_DEBUG = false;  //如果true: 仅打印所有请求信息, 全部按照404响应(或其他单一响应), 否则正常响应
 
 private:  //私有变量
-	int clientSocketID;   //客户端SocketID
+	unsigned int clientSocketID;   //客户端SocketID  (其实就是SOCKET类型)
 	Mlog* pmLog;          //Mlog指针, 这是唯一的, Mlog是单例设计
 
 private:  //对win32 socket api部分函数的封装, 牺牲效率, 提高可读性
@@ -64,10 +64,10 @@ private:  //上层函数
 	};
 	bool SendFileContent(const char * filename);    //发送文件内容
 public:
-	HttpRequest(int c);
+	HttpRequest(unsigned int c);
 	void acceptRequestInterface();                  //接受请求接口
 	void closeRequestInterface();                   //关闭请求接口
 	~HttpRequest();
 };
 
-void acceptRequestThread(void*);                    //供子进程调用的函数入口
+void acceptRequestThread(unsigned int client);                    //供子进程调用的函数入口

@@ -31,7 +31,7 @@ Mlog* Mlog::Instance()
 void Mlog::print(std::string filename, std::string content)
 {
 	//如果content有换行符, 就删掉它
-	if (content.back() == '\n') content.pop_back();
+	if (!content.empty() && content.back() == '\n') content.pop_back();
 
 	std::ofstream out(filename.c_str(), std::ios::app);
 	std::chrono::time_point<std::chrono::system_clock> end = std::chrono::system_clock::now();

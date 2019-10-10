@@ -157,6 +157,7 @@
     <ClCompile Include="HttpServer.cpp" />
     <ClCompile Include="HttpStringParser.cpp" />
     <ClCompile Include="Log.cpp" />
+    <ClCompile Include="tcpserver.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="HttpRequest.h" />

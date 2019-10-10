@@ -3,6 +3,28 @@
 #include "HttpStringParser.h"
 
 /*
+ * 字符串分割函数
+ */
+static std::vector<std::string> split(std::string str, std::string pattern)
+{
+	std::string::size_type pos;
+	std::vector<std::string> result;
+	str += pattern;//扩展字符串以方便操作
+	int size = str.size();
+
+	for (int i = 0; i < size; i++)
+	{
+		pos = str.find(pattern, i);
+		if (pos < size)
+		{
+			result.emplace_back(str.substr(i, pos - i));
+			i = pos + pattern.size() - 1;
+		}
+	}
+	return result;
+}
+
+/*
  * 获取当前程序运行路径
  */
 static std::string GetProgramDir()
@@ -53,10 +75,55 @@ int HttpRequest::getLine(int sock, char * buf, int size)
 	return(i);
 }
 
+/*
+ * 获得请求内容, 内部做分行处理
+ */
 std::vector<std::string> HttpRequest::getRequestContent()
 {
-	std::vector<std::string> res;
-	char buf[1024];
+	//定义长度变量
+	int send_len = 0;
+	int recv_len = 0;
+	int len = 0;
+	//定义发送缓冲区和接受缓冲区
+	char send_buf[100];
+	char recv_buf[100];
+	while (1) {
+		recv_len = recv(this->clientSocketID, recv_buf, 100, 0);
+		if (recv_len < 0) {
+			std::cout << "接受失败！" << std::endl;
+			break;
+		}
+		else {
+			std::cout << "客户端信息:" << recv_buf << std::endl;
+		}
+		std::cout << "请输入回复信息:";
+		//std::cin >> send_buf;
+		//send_len = send(s_accept, send_buf, 100, 0);
+		if (send_len < 0) {
+			std::cout << "发送失败！" << std::endl;
+			break;
+		}
+	}
+
+	/*
+	char buf[20480];
+	int rcd;
+	std::string longContent;
+	while (true)
+	{
+		memset(buf, 0, 0);
+		rcd = recv(this->clientSocketID, buf, 20480, 0);
+		if (rcd == 0) break;
+		if (rcd == SOCKET_ERROR) {
+			rcd = WSAGetLastError();
+			if (rcd == WSAETIMEDOUT) break;
+			this->pmLog->print(this->LOGFILENAME, "FATAL ERROR 接收时出现错误!\nRecv error!\nError code:" + std::to_string(WSAGetLastError()));
+			break;
+		}
+		longContent += std::string(buf);
+	}
+	std::vector<std::string> res = split(longContent, "\r\n");*/
+	/*
 	int numchars = this->getLine(this->clientSocketID, buf, sizeof(buf));;
 	if (numchars == 0) return res;
 	else
@@ -71,7 +138,8 @@ std::vector<std::string> HttpRequest::getRequestContent()
 				res.emplace_back(std::string(buf));
 			}
 		}
-	}
+	}*/
+	std::vector<std::string> res = {};
 	return res;
 }
 
@@ -195,7 +263,7 @@ bool HttpRequest::SendFileContent(const char * filename)
  * HttpRequest类初始化, 初始化客户端SocketID
  * 初始化项目目录
  */
-HttpRequest::HttpRequest(int c) :clientSocketID(c)
+HttpRequest::HttpRequest(unsigned int c) :clientSocketID(c)
 {
 	pmLog = Mlog::Instance();
 }
@@ -205,17 +273,43 @@ HttpRequest::HttpRequest(int c) :clientSocketID(c)
  */
 void HttpRequest::acceptRequestInterface()
 {
+	/*
+	//定义长度变量
+	int send_len = 0;
+	int recv_len = 0;
+	int len = 0;
+	//定义发送缓冲区和接受缓冲区
+	char send_buf[100];
+	char recv_buf[100];
+	while (1) {
+		recv_len = recv(this->clientSocketID, recv_buf, 100, 0);
+		if (recv_len < 0) {
+			std::cout << "接受失败！" << std::endl;
+			break;
+		}
+		else {
+			std::cout << "客户端信息:" << recv_buf << std::endl;
+		}
+		std::cout << "请输入回复信息:";
+		std::cin >> send_buf;
+		send_len = send(this->clientSocketID, send_buf, 100, 0);
+		if (send_len < 0) {
+			std::cout << "发送失败！" << std::endl;
+			break;
+		}
+	}*/
+	
 	//获取请求数据
-	pmLog->print(this->filename, "                                 ");
-	pmLog->print(this->filename, "=================================");
-	pmLog->print(this->filename, "begin accept_request");
+	pmLog->print(this->LOGFILENAME, "                                 ");
+	pmLog->print(this->LOGFILENAME, "=================================");
+	pmLog->print(this->LOGFILENAME, "begin accept_request");
 	std::vector<std::string> requestContent =  this->getRequestContent();
 
 	//打印request所有信息
-	for (auto& rC : requestContent) pmLog->print(this->filename, rC);
+	for (auto& rC : requestContent) this->pmLog->print(this->LOGFILENAME, rC);
 
 	if (requestContent.empty())
-		pmLog->print(this->filename, "Confusing HTTP data: empty");
+		this->pmLog->print(this->LOGFILENAME, "Confusing HTTP data: empty");
 	else if (PRINT_ALL_RAW_DATA_DEBUG)
 		this->NotFound("NOT FOUNDDDDD", true);
 	else
@@ -247,9 +341,7 @@ void HttpRequest::acceptRequestInterface()
 			//execute_cgi(client, path, method, query_string);
 		}
 	}
-	pmLog->print(this->filename, "end accept_request");
-	//执行完毕关闭socket
-	closesocket(this->clientSocketID);
+	this->pmLog->print(this->LOGFILENAME, "end accept_request");
 }
 
 void HttpRequest::closeRequestInterface()
@@ -265,9 +357,8 @@ HttpRequest::~HttpRequest()
 /*
  * 子线程函数
  */
-void acceptRequestThread(void *arg)
+void acceptRequestThread(unsigned int client)
 {
-	int client = (intptr_t)arg;
 	HttpRequest h(client);
 	h.acceptRequestInterface();
 	h.closeRequestInterface();
