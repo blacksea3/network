@@ -300,6 +300,7 @@ HttpServer::~HttpServer()
 	;
 }
 
+/*
 int main()
 {	
 	
@@ -307,10 +308,10 @@ int main()
 	hs.InitServer();
 	hs.BIGRunServer();
 	return 0;
-	/*
+	
 	HttpServer hs = HttpServer();
 	hs.InitServer();
 	hs.RunServer();
-	return 0;*/
-}
+	return 0;
+}*/
 
